@@ -27,13 +27,14 @@ Benachrichtigung, sobald die montierten Reifen nicht mehr zur Jahreszeit passen.
 
 ## Installation
 
-### HACS
+### HACS oder Marketplace
 
-Suche in HACS (oder im eingebauten Marktplatz ab Home Assistant 2026.11) nach **Car Tires Season**
-und lade die Integration herunter. Starte Home Assistant danach neu.
+1. Suche in HACS (Home Assistant 2026.10 und älter) oder unter **Einstellungen → Marketplace**
+   (2026.11 und neuer) nach **Car Tires Season**, oder nutze das Badge *HACS · Marketplace* oben.
+2. Lade die Integration herunter und starte Home Assistant neu.
 
-Als benutzerdefiniertes Repository: `https://github.com/seb5594/hass-car_tires_season-integration`
-mit der Kategorie *Integration*.
+Findet die Suche sie nicht, füge `https://github.com/seb5594/hass-car_tires_season-integration` am selben Ort als
+benutzerdefiniertes Repository hinzu (Kategorie *Integration*) und lade sie von dort herunter.
 
 ### Manuell
 

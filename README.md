@@ -45,13 +45,14 @@ notification when the tires on your car no longer match the season.
 
 ## Installation
 
-### HACS
+### HACS or Marketplace
 
-Search for **Car Tires Season** in HACS (or in the built-in marketplace of Home Assistant 2026.11
-and newer) and download it. Restart Home Assistant afterwards.
+1. Search for **Car Tires Season** in HACS (Home Assistant 2026.10 and older) or in
+   **Settings → Marketplace** (2026.11 and newer), or use the *HACS · Marketplace* badge above.
+2. Download it and restart Home Assistant.
 
-For a custom repository use `https://github.com/seb5594/hass-car_tires_season-integration` with the
-category *Integration*.
+If the search does not find it, add `https://github.com/seb5594/hass-car_tires_season-integration` as a custom repository
+(category *Integration*) in the same place and download it from there.
 
 ### Manual
 
