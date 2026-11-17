@@ -26,6 +26,7 @@ from .const import (
 )
 from .country_names import COUNTRY_NAMES
 from .discovery import async_is_own_instance, async_was_declined, detect_country
+from .messages import load_messages
 from .engine import DEFAULT_FORECAST_DAYS, DEFAULT_THRESHOLD
 from .rules_data import RULES
 
@@ -78,6 +79,13 @@ def _suggested(key: str, value: Any, optional: bool = True) -> vol.Marker:
     return marker(key, description={"suggested_value": value})
 
 
+async def _default_name(hass: HomeAssistant) -> str:
+    """The integration name in the language of the Home Assistant server."""
+    language = getattr(hass.config, "language", "en")
+    messages = await hass.async_add_executor_job(load_messages, language)
+    return str(messages.get("name", DEFAULT_NAME))
+
+
 def _default_weather_entity(hass: HomeAssistant) -> Optional[str]:
     entities = hass.states.async_entity_ids("weather")
     return entities[0] if entities else None
@@ -121,6 +129,7 @@ class CarTiresSeasonConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
     def __init__(self) -> None:
         self._data: Dict[str, Any] = {}
+        self._default_title = DEFAULT_NAME
 
     async def async_step_user(self, user_input: Optional[Dict[str, Any]] = None) -> FlowResult:
         """First step: name, country and the optional weather sources."""
@@ -132,9 +141,9 @@ class CarTiresSeasonConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 return await self.async_step_region()
             return self._create_entry()
 
-        country = getattr(self.hass.config, "country", None)
+        country = detect_country(self.hass)
         schema = {
-            vol.Required(CONF_NAME, default=DEFAULT_NAME): str,
+            vol.Required(CONF_NAME, default=await _default_name(self.hass)): str,
             (
                 vol.Required(CONF_COUNTRY, default=country)
                 if country
@@ -162,19 +171,21 @@ class CarTiresSeasonConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         country = detect_country(self.hass)
         if country is None or (country in RULES and RULES[country].regions):
             return await self.async_step_user()
+        self._default_title = await _default_name(self.hass)
         self._data = {CONF_COUNTRY: country, CONF_AUTO_WEATHER: True, CONF_AUTO_DISCOVERED: True}
         return self._create_entry()
 
     async def async_step_import(self, import_data: Dict[str, Any]) -> FlowResult:
         """Create or refresh an entry from the YAML configuration."""
         data = _clean(import_data)
-        name = data.pop(CONF_NAME, DEFAULT_NAME)
+        given_name = data.pop(CONF_NAME, None)
+        name = given_name or await _default_name(self.hass)
         country = data.get(CONF_COUNTRY) or detect_country(self.hass)
         if country is None:
             _LOGGER.warning("YAML entry '%s' ignored: set `country` (no country could be detected)", name)
             return self.async_abort(reason="country_unknown")
         data[CONF_COUNTRY] = country.upper()
-        unique_id = f"yaml_{slugify(name)}"
+        unique_id = f"yaml_{slugify(given_name or 'default')}"
         await self.async_set_unique_id(unique_id)
         for entry in self._async_current_entries():
             if entry.unique_id == unique_id:
@@ -193,7 +204,7 @@ class CarTiresSeasonConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         return self.async_show_form(step_id="region", data_schema=schema)
 
     def _create_entry(self) -> FlowResult:
-        title = self._data.pop(CONF_NAME, DEFAULT_NAME)
+        title = self._data.pop(CONF_NAME, None) or self._default_title
         return self.async_create_entry(title=title, data=self._data)
 
     @staticmethod

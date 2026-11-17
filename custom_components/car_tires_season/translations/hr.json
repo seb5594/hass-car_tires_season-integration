@@ -1,8 +1,9 @@
 {
+  "title": "Sezona guma",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Sezona guma",
         "description": "Navedite gdje se vozi automobil. Izvori vremena nisu obavezni: bez njih odlučuju zakonsko zimsko razdoblje i kalendar.",
         "data": {
           "name": "Naziv",

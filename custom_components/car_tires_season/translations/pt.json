@@ -1,8 +1,9 @@
 {
+  "title": "Época dos pneus",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Época dos pneus",
         "description": "Indique onde o carro circula. As fontes meteorológicas são opcionais: sem elas decidem o período de inverno legal e o calendário.",
         "data": {
           "name": "Nome",

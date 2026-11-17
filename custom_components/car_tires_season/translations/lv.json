@@ -1,8 +1,9 @@
 {
+  "title": "Riepu sezona",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Riepu sezona",
         "description": "Norādiet, kur tiek izmantots auto. Laika apstākļu avoti nav obligāti: bez tiem lēmumu pieņem likumā noteiktais ziemas periods un kalendārs.",
         "data": {
           "name": "Nosaukums",

@@ -1,8 +1,9 @@
 {
+  "title": "Rehvihooaeg",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Rehvihooaeg",
         "description": "Määrake, kus autoga sõidetakse. Ilmaallikad on valikulised: ilma nendeta otsustavad seadusega ette nähtud talveperiood ja kalender.",
         "data": {
           "name": "Nimi",

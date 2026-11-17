@@ -1,8 +1,9 @@
 {
+  "title": "Saison des pneus",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Saison des pneus",
         "description": "Indiquez où la voiture circule. Les sources météo sont facultatives : sans elles, la période hivernale légale et le calendrier décident.",
         "data": {
           "name": "Nom",

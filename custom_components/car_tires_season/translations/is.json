@@ -1,8 +1,9 @@
 {
+  "title": "Dekkjatímabil",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Dekkjatímabil",
         "description": "Tilgreindu hvar bíllinn er notaður. Veðurgjafar eru valfrjálsir: án þeirra ráða lögbundið vetrartímabil og dagatalið.",
         "data": {
           "name": "Nafn",

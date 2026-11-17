@@ -281,6 +281,25 @@ async def test_discovery_creates_the_entry_without_asking(hass, hass_storage):
     await unload(hass, entry)
 
 
+async def test_names_follow_the_server_language(hass, hass_storage):
+    hass.config.country = "DE"
+    hass.config.language = "de"
+    result = await discover(hass, await own_announcement(hass))
+    assert result["title"] == "Autoreifen Saison"
+    await hass.async_block_till_done()
+    await unload(hass, hass.config_entries.async_entries(DOMAIN)[0])
+
+
+async def test_form_suggests_the_translated_name_and_detected_country(hass, hass_storage):
+    hass.config.country = "AT"
+    hass.config.language = "fr"
+    result = await hass.config_entries.flow.async_init(DOMAIN, context={"source": "user"})
+    defaults = {str(key): key.default() for key in result["data_schema"].schema if callable(getattr(key, "default", None))}
+    assert defaults["name"] == "Saison des pneus"
+    assert defaults["country"] == "AT"
+    hass.config_entries.flow.async_abort(result["flow_id"])
+
+
 async def test_discovery_ignores_other_home_assistant_instances(hass, hass_storage):
     hass.config.country = "DE"
     result = await discover(hass, SimpleNamespace(properties={"uuid": "someone-else"}))

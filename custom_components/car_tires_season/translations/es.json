@@ -1,8 +1,9 @@
 {
+  "title": "Temporada de neumáticos",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Temporada de neumáticos",
         "description": "Indica dónde se conduce el coche. Las fuentes meteorológicas son opcionales: sin ellas deciden el periodo invernal legal y el calendario.",
         "data": {
           "name": "Nombre",

@@ -1,8 +1,9 @@
 {
+  "title": "Däcksäsong",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Däcksäsong",
         "description": "Ange var bilen körs. Väderkällor är valfria: utan dem avgör den lagstadgade vinterperioden och kalendern.",
         "data": {
           "name": "Namn",

@@ -1,8 +1,9 @@
 {
+  "title": "Padangų sezonas",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Padangų sezonas",
         "description": "Nurodykite, kur važinėjama automobiliu. Orų šaltiniai neprivalomi: be jų lemia įstatymais nustatytas žiemos laikotarpis ir kalendorius.",
         "data": {
           "name": "Pavadinimas",

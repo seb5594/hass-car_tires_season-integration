@@ -1,8 +1,9 @@
 {
+  "title": "Sezona pnevmatik",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Sezona pnevmatik",
         "description": "Navedite, kje se vozi avtomobil. Viri vremena niso obvezni: brez njih odločata zakonsko zimsko obdobje in koledar.",
         "data": {
           "name": "Ime",

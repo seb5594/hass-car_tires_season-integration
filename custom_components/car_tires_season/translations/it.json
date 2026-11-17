@@ -1,8 +1,9 @@
 {
+  "title": "Stagione pneumatici",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Stagione pneumatici",
         "description": "Indica dove circola l'auto. Le fonti meteo sono facoltative: senza di esse decidono il periodo invernale previsto dalla legge e il calendario.",
         "data": {
           "name": "Nome",

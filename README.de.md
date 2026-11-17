@@ -23,7 +23,7 @@ Benachrichtigung, sobald die montierten Reifen nicht mehr zur Jahreszeit passen.
 - **Merkt sich, was montiert ist.** Eine Auswahl-Entität hält die aktuellen Reifen fest, der
   Binärsensor „Reifenwechsel fällig“ ist an, solange sie nicht zur Empfehlung passen.
 - **Spricht deine Sprache.** Einrichtung, Entitätsnamen und Benachrichtigung sind in 35 Sprachen
-  übersetzt, und die Regeln der jeweiligen Länder wurden für jede Sprache geprüft.
+  übersetzt (hierzulande heißt sie „Autoreifen Saison“; Name und vorausgewähltes Land richten sich nach Sprache und Einstellungen deines Servers), und die Regeln der jeweiligen Länder wurden für jede Sprache geprüft.
 
 ## Installation
 
@@ -120,6 +120,30 @@ automation:
           title: Reifen
           message: "Zeit für den Wechsel auf {{ state_attr('binary_sensor.golf_tire_change_due', 'change_to') }}-Reifen."
 ```
+
+## Besonderheiten der Länder
+
+Die Regeln unterscheiden sich stärker, als man denkt. Die Integration bildet jede Art einzeln ab,
+statt alles auf „1.10. bis Ostern“ zu pressen. Das Attribut `legal_obligation` zeigt, welche Art für dich gilt.
+
+| Art | Wirkung auf den Sensor | Länder (Beispiele) |
+| --- | --- | --- |
+| Fester Zeitraum, Wetter egal | Winterreifen werden für den ganzen Zeitraum vorgegeben, auch an einem warmen Tag | Russland (1.12. bis Ende Februar, keine Sonderregel für Moskau), Belarus, Estland, Lettland (1.12.–1.3.), Litauen (10.11.–31.3.), Slowenien, Kroatien, Bulgarien, Bosnien, Montenegro, Nordmazedonien |
+| Zeitraum, aber nur bei winterlichen Bedingungen | Der Zeitraum begrenzt nur, wann das Wetter umschalten darf; `legal_status` wird `required`, sobald es winterlich ist | Österreich (1.11.–15.4.), Tschechien, Slowakei, Schweden (1.12.–31.3.), Finnland, Serbien, Moldau |
+| Situativ, ohne Datum | Allein das Wetter entscheidet, der Kalender ist nur Rückfall | Deutschland („O bis O“ ist eine Faustregel, kein Gesetz), Luxemburg, Rumänien, Dänemark (seit Juli 2025), Norwegen, Japan (je Präfektur) |
+| Nur in Zonen oder auf beschilderten Straßen | Wird als `regional` gemeldet, das Wetter entscheidet | Frankreich (Bergzonen in 34 Départements, 1.11.–31.3.), Italien (per Schild, 15.11.–15.4.; Aostatal ab 15.10.), British Columbia |
+| Nach Region | Bei der Einrichtung wird die Region abgefragt | Kanada: Québec verlangt für jedes dort zugelassene Auto Winterreifen vom 1.12. bis 15.3., British Columbia nur auf beschilderten Highways |
+| Keine Pflicht | Temperatur und eine praktische Saison entscheiden | Schweiz und Liechtenstein (du haftest aber, wenn das Auto den Bedingungen nicht gewachsen ist), Polen, Belgien, Niederlande, Vereinigtes Königreich, Irland, Spanien, Portugal, Griechenland, Ungarn, USA, China, Südkorea, Taiwan, Ukraine |
+
+Ein paar Details, die man leicht falsch macht:
+
+- **Deutschland:** Kein Datum, aber bei Schnee, Matsch oder Eis brauchen alle vier Räder Winterreifen mit Alpine-Symbol; reines M+S zählt nicht mehr.
+- **Türkei:** Der Zeitraum (15.11.–15.4.) ist nur für Nutzfahrzeuge Pflicht. Privatwagen wird er empfohlen, hier also eine Empfehlung.
+- **Norwegen:** Keine feste Pflicht, aber die Reifen müssen zu den Verhältnissen passen und 3 mm Profil haben; geprüft wird vom 1.11. bis nach Ostern.
+- **Russland:** Sommerreifen sind von Dezember bis Februar verboten, Spikes- oder Reibungswinterreifen sind in Ordnung.
+- **Südhalbkugel:** Länder ohne Eintrag nutzen die umgekehrte Saison (1.6.–30.9.) und das Wetter.
+
+Die vollständige Tabelle mit Zeitraum, Zuverlässigkeit und Quellen jedes Landes steht in [docs/COUNTRY_RULES.md](docs/COUNTRY_RULES.md).
 
 ## Gut zu wissen
 

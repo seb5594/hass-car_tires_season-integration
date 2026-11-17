@@ -1,8 +1,9 @@
 {
+  "title": "Dæksæson",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Dæksæson",
         "description": "Angiv, hvor bilen køres. Vejrkilder er valgfrie: Uden dem afgør den lovbestemte vinterperiode og kalenderen.",
         "data": {
           "name": "Navn",

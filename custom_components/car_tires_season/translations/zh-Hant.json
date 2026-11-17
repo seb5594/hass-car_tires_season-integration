@@ -1,8 +1,9 @@
 {
+  "title": "輪胎季節",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "輪胎季節",
         "description": "請指定車輛行駛的國家。天氣來源為選填:未提供時,由法定冬季期間和日曆決定。",
         "data": {
           "name": "名稱",

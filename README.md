@@ -43,7 +43,7 @@ notification when the tires on your car no longer match the season.
 - **Remembers what is on your car.** A select entity holds the mounted tires; the "tire change due"
   binary sensor is on while they do not match the recommendation.
 - **Speaks your language.** Setup, entity names and the notification text are translated into
-  35 languages, and the rules of the matching countries were checked for each of them.
+  35 languages (the integration is called "Autoreifen Saison" in German, "Saison des pneus" in French, and so on; the name and the preselected country follow the language and settings of your server), and the rules of the matching countries were checked for each of them.
 
 ## Installation
 
@@ -152,6 +152,30 @@ automation:
           title: Tires
           message: "Time to switch to {{ state_attr('binary_sensor.golf_tire_change_due', 'change_to') }} tires."
 ```
+
+## Country specifics
+
+The rules differ more than you might expect, and the integration models each kind instead of
+squeezing everything into "1 Oct – Easter". The attribute `legal_obligation` tells which kind applies to you.
+
+| Kind | What it means for the sensor | Countries (examples) |
+| --- | --- | --- |
+| Fixed period, weather ignored | Winter tires are forced for the whole period, even on a warm day | Russia (1 Dec – end of Feb, no separate rule for Moscow), Belarus, Estonia, Latvia (1 Dec – 1 Mar), Lithuania (10 Nov – 31 Mar), Slovenia, Croatia, Bulgaria, Bosnia, Montenegro, North Macedonia |
+| Period, but only in winter conditions | The period only limits when weather can trigger the switch; `legal_status` becomes `required` once it is wintry | Austria (1 Nov – 15 Apr), Czechia, Slovakia, Sweden (1 Dec – 31 Mar), Finland, Serbia, Moldova |
+| Situational, no dates | Weather alone decides; the calendar is only a fallback | Germany (the rule of thumb "O bis O" is not law), Luxembourg, Romania, Denmark (since July 2025), Norway, Japan (set by each prefecture) |
+| Only in zones or on signposted roads | Reported as `regional`, the weather decides | France (mountain zones of 34 departments, 1 Nov – 31 Mar), Italy (by sign, 15 Nov – 15 Apr; Aosta Valley from 15 Oct), British Columbia |
+| By region | Asks for the region during setup | Canada: Québec requires winter tires from 1 Dec to 15 Mar for every registered car, British Columbia only on signposted highways |
+| No duty | Temperature and a practical season decide | Switzerland and Liechtenstein (but you are liable if the car is not fit for the conditions), Poland, Belgium, the Netherlands, United Kingdom, Ireland, Spain, Portugal, Greece, Hungary, USA, China, South Korea, Taiwan, Ukraine |
+
+A few details that are easy to get wrong:
+
+- **Germany:** No date, but all four wheels need winter tires in snow, slush or ice, and they need the Alpine symbol; plain M+S no longer counts.
+- **Türkiye:** The period (15 Nov – 15 Apr) is mandatory for commercial vehicles only. Private cars are advised to follow it, so it is a recommendation here.
+- **Norway:** No fixed duty, but tires must suit the conditions and have 3 mm tread, which is checked from 1 Nov until after Easter.
+- **Russia:** Summer tires are banned from December to February, studded or friction winter tires are fine.
+- **Southern hemisphere:** Countries without an entry use the reversed season (1 Jun – 30 Sep) and rely on the weather.
+
+The full table with period, confidence and sources of every country is in [docs/COUNTRY_RULES.md](docs/COUNTRY_RULES.md).
 
 ## Good to know
 

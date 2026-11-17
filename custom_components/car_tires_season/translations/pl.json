@@ -1,8 +1,9 @@
 {
+  "title": "Sezon opon",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Sezon opon",
         "description": "Wskaż, gdzie jeździ samochód. Źródła pogody są opcjonalne: bez nich decyduje ustawowy okres zimowy i kalendarz.",
         "data": {
           "name": "Nazwa",

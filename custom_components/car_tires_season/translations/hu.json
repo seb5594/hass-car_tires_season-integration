@@ -1,8 +1,9 @@
 {
+  "title": "Gumiszezon",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Gumiszezon",
         "description": "Add meg, hol használod az autót. Az időjárási források nem kötelezők: nélkülük a törvényes téli időszak és a naptár dönt.",
         "data": {
           "name": "Név",

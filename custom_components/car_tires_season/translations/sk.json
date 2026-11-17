@@ -1,8 +1,9 @@
 {
+  "title": "Sezóna pneumatík",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Sezóna pneumatík",
         "description": "Zadajte, kde sa s autom jazdí. Zdroje počasia sú voliteľné: bez nich rozhoduje zákonné zimné obdobie a kalendár.",
         "data": {
           "name": "Názov",

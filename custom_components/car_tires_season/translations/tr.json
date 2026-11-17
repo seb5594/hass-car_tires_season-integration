@@ -1,8 +1,9 @@
 {
+  "title": "Lastik Sezonu",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Lastik Sezonu",
         "description": "Aracın nerede kullanıldığını belirtin. Hava durumu kaynakları isteğe bağlıdır: onlar olmadan yasal kış dönemi ve takvim belirleyicidir.",
         "data": {
           "name": "Ad",

@@ -1,8 +1,9 @@
 {
+  "title": "타이어 시즌",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "타이어 시즌",
         "description": "차를 운행하는 국가를 지정하세요. 날씨 소스는 선택 사항이며, 없으면 법정 동계 기간과 달력으로 판단합니다.",
         "data": {
           "name": "이름",

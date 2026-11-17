@@ -1,8 +1,9 @@
 {
+  "title": "Bandenseizoen",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Bandenseizoen",
         "description": "Geef aan waar de auto rijdt. Weerbronnen zijn optioneel: zonder die bepalen de wettelijke winterperiode en de kalender de uitkomst.",
         "data": {
           "name": "Naam",

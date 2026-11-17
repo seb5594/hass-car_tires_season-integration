@@ -1,8 +1,9 @@
 {
+  "title": "Autoreifen Saison",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Autoreifen Saison",
         "description": "Lege fest, wo das Auto gefahren wird. Wetterquellen sind optional: Ohne sie entscheiden die gesetzliche Winterzeit und der Kalender.",
         "data": {
           "name": "Name",

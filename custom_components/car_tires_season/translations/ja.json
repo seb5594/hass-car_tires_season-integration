@@ -1,8 +1,9 @@
 {
+  "title": "タイヤシーズン",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "タイヤシーズン",
         "description": "車を使う国を指定してください。天気ソースは任意です。指定しない場合は、法定の冬季期間とカレンダーで判断します。",
         "data": {
           "name": "名前",

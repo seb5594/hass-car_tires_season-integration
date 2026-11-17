@@ -1,8 +1,9 @@
 {
+  "title": "Sezoni i gomave",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Sezoni i gomave",
         "description": "Tregoni ku përdoret makina. Burimet e motit janë opsionale: pa to vendosin periudha ligjore e dimrit dhe kalendari.",
         "data": {
           "name": "Emri",

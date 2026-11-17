@@ -1,8 +1,9 @@
 {
+  "title": "Sezon anvelope",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Sezon anvelope",
         "description": "Indică unde circulă mașina. Sursele meteo sunt opționale: fără ele decid perioada legală de iarnă și calendarul.",
         "data": {
           "name": "Nume",

@@ -1,8 +1,9 @@
 {
+  "title": "Rengaskausi",
   "config": {
     "step": {
       "user": {
-        "title": "Car Tires Season",
+        "title": "Rengaskausi",
         "description": "Kerro, missä autoa ajetaan. Säälähteet ovat valinnaisia: ilman niitä ratkaisevat lakisääteinen talvikausi ja kalenteri.",
         "data": {
           "name": "Nimi",
