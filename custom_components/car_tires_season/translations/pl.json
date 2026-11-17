@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "Wskaż, gdzie jeździ samochód. Źródła pogody są opcjonalne: bez nich decyduje ustawowy okres zimowy i kalendarz.",
+        "data": {
+          "name": "Nazwa",
+          "country": "Kraj",
+          "weather_entity": "Encja pogody",
+          "temperature_entity": "Czujnik temperatury zewnętrznej"
+        },
+        "data_description": {
+          "country": "Określa, jakie przepisy dotyczące opon zimowych obowiązują.",
+          "weather_entity": "Dostarcza prognozę i aktualną temperaturę.",
+          "temperature_entity": "Opcjonalnie. Używany zamiast temperatury z encji pogody."
+        }
+      },
+      "region": {
+        "title": "Region",
+        "description": "Przepisy różnią się w zależności od regionu. Dla wszystkich pozostałych regionów zostaw puste.",
+        "data": {
+          "region": "Region"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Ustawienia",
+        "data": {
+          "region": "Region",
+          "weather_entity": "Encja pogody",
+          "temperature_entity": "Czujnik temperatury zewnętrznej",
+          "temperature_threshold": "Próg temperatury",
+          "forecast_days": "Uwzględniane dni",
+          "notifications": "Trwałe powiadomienie"
+        },
+        "data_description": {
+          "weather_entity": "Dostarcza prognozę i aktualną temperaturę.",
+          "temperature_entity": "Opcjonalnie. Używany zamiast temperatury z encji pogody.",
+          "temperature_threshold": "Średnia temperatura, poniżej której zaleca się opony zimowe (zwykle 7 °C).",
+          "forecast_days": "Z ilu dni prognozy (lub minionych dni) liczona jest średnia.",
+          "notifications": "Wyświetla powiadomienie, gdy nadszedł czas na wymianę opon."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Zalecane opony",
+        "state": {
+          "summer": "Opony letnie",
+          "winter": "Opony zimowe"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Wymiana opon wymagana"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Założone opony",
+        "state": {
+          "summer": "Opony letnie",
+          "winter": "Opony zimowe",
+          "all_season": "Opony całoroczne"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": "É altura de trocar os pneus",
+  "to_winter": "Recomendam-se agora pneus de inverno. É altura de passar de pneus de verão para inverno.",
+  "to_summer": "Recomendam-se agora pneus de verão. É altura de passar de pneus de inverno para verão.",
+  "reasons": {
+    "legal_period": "No seu país, os pneus de inverno são obrigatórios por lei neste período.",
+    "snow_expected": "Está a nevar ou prevê-se neve.",
+    "frost_risk": "Prevê-se geada, as estradas podem estar com gelo.",
+    "cold_weather": "A temperatura média está abaixo do limite.",
+    "mild_weather": "O tempo tem estado ameno há algum tempo.",
+    "season_calendar": "Não há dados meteorológicos; esta é a época de inverno habitual no seu país.",
+    "outside_season": "Estamos fora da época de inverno do seu país."
+  }
+}

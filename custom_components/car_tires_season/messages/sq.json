@@ -1,0 +1,14 @@
+{
+  "title": "Koha për të ndërruar gomat",
+  "to_winter": "Tani rekomandohen gomat e dimrit. Është koha të kaloni nga gomat e verës te ato të dimrit.",
+  "to_summer": "Tani rekomandohen gomat e verës. Është koha të kaloni nga gomat e dimrit te ato të verës.",
+  "reasons": {
+    "legal_period": "Në shtetin tuaj gomat e dimrit janë të detyrueshme me ligj në këtë periudhë.",
+    "snow_expected": "Po bie borë ose pritet borë.",
+    "frost_risk": "Pritet ngricë, prandaj rrugët mund të jenë të ngrira.",
+    "cold_weather": "Temperatura mesatare është nën prag.",
+    "mild_weather": "Moti është i ngrohtë prej ca kohësh.",
+    "season_calendar": "Nuk ka të dhëna moti; kjo është sezoni i zakonshëm i dimrit në shtetin tuaj.",
+    "outside_season": "Jemi jashtë sezonit të dimrit të shtetit tuaj."
+  }
+}

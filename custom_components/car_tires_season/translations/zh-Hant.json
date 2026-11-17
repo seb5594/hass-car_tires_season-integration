@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "請指定車輛行駛的國家。天氣來源為選填:未提供時,由法定冬季期間和日曆決定。",
+        "data": {
+          "name": "名稱",
+          "country": "國家/地區",
+          "weather_entity": "天氣實體",
+          "temperature_entity": "室外溫度感測器"
+        },
+        "data_description": {
+          "country": "決定適用哪些冬季輪胎規定。",
+          "weather_entity": "提供天氣預報和目前溫度。",
+          "temperature_entity": "選填。用於取代天氣實體的溫度。"
+        }
+      },
+      "region": {
+        "title": "地區",
+        "description": "各地區規定不同。其他所有地區請留空。",
+        "data": {
+          "region": "地區"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "設定",
+        "data": {
+          "region": "地區",
+          "weather_entity": "天氣實體",
+          "temperature_entity": "室外溫度感測器",
+          "temperature_threshold": "溫度門檻",
+          "forecast_days": "參考天數",
+          "notifications": "持續性通知"
+        },
+        "data_description": {
+          "weather_entity": "提供天氣預報和目前溫度。",
+          "temperature_entity": "選填。用於取代天氣實體的溫度。",
+          "temperature_threshold": "低於此平均溫度時建議使用冬季輪胎(通常為 7 °C)。",
+          "forecast_days": "計算平均值所用的預報(或過去)天數。",
+          "notifications": "到了更換輪胎的時間時顯示通知。"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "建議輪胎",
+        "state": {
+          "summer": "夏季輪胎",
+          "winter": "冬季輪胎"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "需要換胎"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "目前安裝的輪胎",
+        "state": {
+          "summer": "夏季輪胎",
+          "winter": "冬季輪胎",
+          "all_season": "四季輪胎"
+        }
+      }
+    }
+  }
+}

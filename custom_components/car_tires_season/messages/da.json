@@ -1,0 +1,14 @@
+{
+  "title": "Tid til dækskift",
+  "to_winter": "Vinterdæk anbefales nu. Det er tid til at skifte fra sommerdæk til vinterdæk.",
+  "to_summer": "Sommerdæk anbefales nu. Det er tid til at skifte fra vinterdæk til sommerdæk.",
+  "reasons": {
+    "legal_period": "I dit land er vinterdæk lovpligtige i denne periode.",
+    "snow_expected": "Det sner, eller der er sne på vej.",
+    "frost_risk": "Der er udsigt til frost, så vejene kan være glatte.",
+    "cold_weather": "Gennemsnitstemperaturen ligger under grænsen.",
+    "mild_weather": "Vejret har været mildt et stykke tid.",
+    "season_calendar": "Der er ingen vejrdata; dette er den sædvanlige vintersæson i dit land.",
+    "outside_season": "Det er uden for vintersæsonen i dit land."
+  }
+}

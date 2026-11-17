@@ -1,0 +1,14 @@
+{
+  "title": "Este timpul să schimbi anvelopele",
+  "to_winter": "Acum se recomandă anvelopele de iarnă. Este timpul să treci de la anvelopele de vară la cele de iarnă.",
+  "to_summer": "Acum se recomandă anvelopele de vară. Este timpul să treci de la anvelopele de iarnă la cele de vară.",
+  "reasons": {
+    "legal_period": "În țara ta, anvelopele de iarnă sunt obligatorii prin lege în această perioadă.",
+    "snow_expected": "Ninge sau se așteaptă ninsoare.",
+    "frost_risk": "Se așteaptă îngheț, deci drumurile pot fi acoperite cu gheață.",
+    "cold_weather": "Temperatura medie este sub prag.",
+    "mild_weather": "Vremea este blândă de ceva timp.",
+    "season_calendar": "Nu există date meteo; acesta este sezonul de iarnă obișnuit din țara ta.",
+    "outside_season": "Suntem în afara sezonului de iarnă din țara ta."
+  }
+}

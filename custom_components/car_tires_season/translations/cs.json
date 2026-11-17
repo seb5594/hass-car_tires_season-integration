@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "Zadejte, kde se s autem jezdí. Zdroje počasí jsou volitelné: bez nich rozhoduje zákonné zimní období a kalendář.",
+        "data": {
+          "name": "Název",
+          "country": "Země",
+          "weather_entity": "Entita počasí",
+          "temperature_entity": "Venkovní teplotní senzor"
+        },
+        "data_description": {
+          "country": "Určuje, jaká pravidla pro zimní pneumatiky platí.",
+          "weather_entity": "Poskytuje předpověď a aktuální teplotu.",
+          "temperature_entity": "Volitelné. Použije se místo teploty entity počasí."
+        }
+      },
+      "region": {
+        "title": "Region",
+        "description": "Pravidla se liší podle regionu. Pro všechny ostatní regiony ponechte prázdné.",
+        "data": {
+          "region": "Region"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Nastavení",
+        "data": {
+          "region": "Region",
+          "weather_entity": "Entita počasí",
+          "temperature_entity": "Venkovní teplotní senzor",
+          "temperature_threshold": "Teplotní práh",
+          "forecast_days": "Počet sledovaných dnů",
+          "notifications": "Trvalé oznámení"
+        },
+        "data_description": {
+          "weather_entity": "Poskytuje předpověď a aktuální teplotu.",
+          "temperature_entity": "Volitelné. Použije se místo teploty entity počasí.",
+          "temperature_threshold": "Průměrná teplota, pod kterou se doporučují zimní pneumatiky (obvykle 7 °C).",
+          "forecast_days": "Z kolika dnů předpovědi (nebo uplynulých dnů) se počítá průměr.",
+          "notifications": "Zobrazí oznámení, když je čas vyměnit pneumatiky."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Doporučené pneumatiky",
+        "state": {
+          "summer": "Letní pneumatiky",
+          "winter": "Zimní pneumatiky"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Výměna pneumatik na řadě"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Namontované pneumatiky",
+        "state": {
+          "summer": "Letní pneumatiky",
+          "winter": "Zimní pneumatiky",
+          "all_season": "Celoroční pneumatiky"
+        }
+      }
+    }
+  }
+}

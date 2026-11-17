@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "Aracın nerede kullanıldığını belirtin. Hava durumu kaynakları isteğe bağlıdır: onlar olmadan yasal kış dönemi ve takvim belirleyicidir.",
+        "data": {
+          "name": "Ad",
+          "country": "Ülke",
+          "weather_entity": "Hava durumu varlığı",
+          "temperature_entity": "Dış sıcaklık sensörü"
+        },
+        "data_description": {
+          "country": "Hangi kış lastiği kurallarının geçerli olduğunu belirler.",
+          "weather_entity": "Tahmini ve güncel sıcaklığı sağlar.",
+          "temperature_entity": "İsteğe bağlı. Hava durumu varlığının sıcaklığı yerine kullanılır."
+        }
+      },
+      "region": {
+        "title": "Bölge",
+        "description": "Kurallar bölgeye göre değişir. Diğer tüm bölgeler için boş bırakın.",
+        "data": {
+          "region": "Bölge"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Ayarlar",
+        "data": {
+          "region": "Bölge",
+          "weather_entity": "Hava durumu varlığı",
+          "temperature_entity": "Dış sıcaklık sensörü",
+          "temperature_threshold": "Sıcaklık eşiği",
+          "forecast_days": "İncelenen gün sayısı",
+          "notifications": "Kalıcı bildirim"
+        },
+        "data_description": {
+          "weather_entity": "Tahmini ve güncel sıcaklığı sağlar.",
+          "temperature_entity": "İsteğe bağlı. Hava durumu varlığının sıcaklığı yerine kullanılır.",
+          "temperature_threshold": "Altında kış lastiği önerilen ortalama sıcaklık (genellikle 7 °C).",
+          "forecast_days": "Ortalamanın kaç günlük tahminden (veya geçmiş günden) hesaplanacağı.",
+          "notifications": "Lastik değiştirme zamanı geldiğinde bildirim gösterir."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Önerilen lastikler",
+        "state": {
+          "summer": "Yaz lastiği",
+          "winter": "Kış lastiği"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Lastik değişimi gerekiyor"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Takılı lastikler",
+        "state": {
+          "summer": "Yaz lastiği",
+          "winter": "Kış lastiği",
+          "all_season": "Dört mevsim lastik"
+        }
+      }
+    }
+  }
+}

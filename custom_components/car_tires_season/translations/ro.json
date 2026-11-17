@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "Indică unde circulă mașina. Sursele meteo sunt opționale: fără ele decid perioada legală de iarnă și calendarul.",
+        "data": {
+          "name": "Nume",
+          "country": "Țară",
+          "weather_entity": "Entitate meteo",
+          "temperature_entity": "Senzor de temperatură exterioară"
+        },
+        "data_description": {
+          "country": "Stabilește ce reguli privind anvelopele de iarnă se aplică.",
+          "weather_entity": "Furnizează prognoza și temperatura actuală.",
+          "temperature_entity": "Opțional. Folosit în locul temperaturii entității meteo."
+        }
+      },
+      "region": {
+        "title": "Regiune",
+        "description": "Regulile diferă în funcție de regiune. Lasă gol pentru toate celelalte regiuni.",
+        "data": {
+          "region": "Regiune"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Setări",
+        "data": {
+          "region": "Regiune",
+          "weather_entity": "Entitate meteo",
+          "temperature_entity": "Senzor de temperatură exterioară",
+          "temperature_threshold": "Prag de temperatură",
+          "forecast_days": "Zile analizate",
+          "notifications": "Notificare persistentă"
+        },
+        "data_description": {
+          "weather_entity": "Furnizează prognoza și temperatura actuală.",
+          "temperature_entity": "Opțional. Folosit în locul temperaturii entității meteo.",
+          "temperature_threshold": "Temperatura medie sub care se recomandă anvelopele de iarnă (de obicei 7 °C).",
+          "forecast_days": "Din câte zile de prognoză (sau zile trecute) se calculează media.",
+          "notifications": "Afișează o notificare când este timpul să schimbi anvelopele."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Anvelope recomandate",
+        "state": {
+          "summer": "Anvelope de vară",
+          "winter": "Anvelope de iarnă"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Schimbarea anvelopelor este necesară"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Anvelope montate",
+        "state": {
+          "summer": "Anvelope de vară",
+          "winter": "Anvelope de iarnă",
+          "all_season": "Anvelope all-season"
+        }
+      }
+    }
+  }
+}

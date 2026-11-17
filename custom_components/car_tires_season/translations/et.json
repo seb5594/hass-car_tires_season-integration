@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "Määrake, kus autoga sõidetakse. Ilmaallikad on valikulised: ilma nendeta otsustavad seadusega ette nähtud talveperiood ja kalender.",
+        "data": {
+          "name": "Nimi",
+          "country": "Riik",
+          "weather_entity": "Ilmaolem",
+          "temperature_entity": "Välistemperatuuri andur"
+        },
+        "data_description": {
+          "country": "Määrab, millised talverehvide reeglid kehtivad.",
+          "weather_entity": "Annab ilmaprognoosi ja praeguse temperatuuri.",
+          "temperature_entity": "Valikuline. Kasutatakse ilmaolemi temperatuuri asemel."
+        }
+      },
+      "region": {
+        "title": "Regioon",
+        "description": "Reeglid erinevad regiooniti. Kõigi teiste regioonide jaoks jäta tühjaks.",
+        "data": {
+          "region": "Regioon"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Seaded",
+        "data": {
+          "region": "Regioon",
+          "weather_entity": "Ilmaolem",
+          "temperature_entity": "Välistemperatuuri andur",
+          "temperature_threshold": "Temperatuuri lävi",
+          "forecast_days": "Arvestatavad päevad",
+          "notifications": "Püsiteavitus"
+        },
+        "data_description": {
+          "weather_entity": "Annab ilmaprognoosi ja praeguse temperatuuri.",
+          "temperature_entity": "Valikuline. Kasutatakse ilmaolemi temperatuuri asemel.",
+          "temperature_threshold": "Keskmine temperatuur, millest madalamal soovitatakse talverehve (tavaliselt 7 °C).",
+          "forecast_days": "Mitme päeva prognoosist (või möödunud päevast) keskmist arvutatakse.",
+          "notifications": "Näitab teavitust, kui on aeg rehve vahetada."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Soovitatud rehvid",
+        "state": {
+          "summer": "Suverehvid",
+          "winter": "Talverehvid"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Rehvivahetus on aktuaalne"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Paigaldatud rehvid",
+        "state": {
+          "summer": "Suverehvid",
+          "winter": "Talverehvid",
+          "all_season": "Aastaringsed rehvid"
+        }
+      }
+    }
+  }
+}

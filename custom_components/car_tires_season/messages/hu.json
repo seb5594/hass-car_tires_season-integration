@@ -1,0 +1,14 @@
+{
+  "title": "Ideje gumit cserélni",
+  "to_winter": "Most téli gumi ajánlott. Ideje nyári gumiról télire cserélni.",
+  "to_summer": "Most nyári gumi ajánlott. Ideje téli gumiról nyárira cserélni.",
+  "reasons": {
+    "legal_period": "Az országodban ebben az időszakban a téli gumi törvényileg kötelező.",
+    "snow_expected": "Havazik, vagy havazás várható.",
+    "frost_risk": "Fagy várható, ezért az utak jegesek lehetnek.",
+    "cold_weather": "Az átlaghőmérséklet a küszöb alatt van.",
+    "mild_weather": "Az időjárás már egy ideje enyhe.",
+    "season_calendar": "Nincs időjárási adat; ez az országodban szokásos téli szezon.",
+    "outside_season": "Az országod téli szezonján kívül vagyunk."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "Indica dove circola l'auto. Le fonti meteo sono facoltative: senza di esse decidono il periodo invernale previsto dalla legge e il calendario.",
+        "data": {
+          "name": "Nome",
+          "country": "Paese",
+          "weather_entity": "Entità meteo",
+          "temperature_entity": "Sensore di temperatura esterna"
+        },
+        "data_description": {
+          "country": "Determina quali norme sugli pneumatici invernali si applicano.",
+          "weather_entity": "Fornisce le previsioni e la temperatura attuale.",
+          "temperature_entity": "Facoltativo. Sostituisce la temperatura dell'entità meteo."
+        }
+      },
+      "region": {
+        "title": "Regione",
+        "description": "Le norme variano in base alla regione. Lascia vuoto per tutte le altre regioni.",
+        "data": {
+          "region": "Regione"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Impostazioni",
+        "data": {
+          "region": "Regione",
+          "weather_entity": "Entità meteo",
+          "temperature_entity": "Sensore di temperatura esterna",
+          "temperature_threshold": "Soglia di temperatura",
+          "forecast_days": "Giorni considerati",
+          "notifications": "Notifica persistente"
+        },
+        "data_description": {
+          "weather_entity": "Fornisce le previsioni e la temperatura attuale.",
+          "temperature_entity": "Facoltativo. Sostituisce la temperatura dell'entità meteo.",
+          "temperature_threshold": "Temperatura media sotto la quale si consigliano gli pneumatici invernali (di solito 7 °C).",
+          "forecast_days": "Su quanti giorni di previsione (o giorni passati) si calcola la media.",
+          "notifications": "Mostra una notifica quando è ora di cambiare gli pneumatici."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Pneumatici consigliati",
+        "state": {
+          "summer": "Pneumatici estivi",
+          "winter": "Pneumatici invernali"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Cambio gomme da fare"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Pneumatici montati",
+        "state": {
+          "summer": "Pneumatici estivi",
+          "winter": "Pneumatici invernali",
+          "all_season": "Pneumatici quattro stagioni"
+        }
+      }
+    }
+  }
+}
