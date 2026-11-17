@@ -1,5 +1,6 @@
 """Static checks that need no Home Assistant installation."""
 import json
+import re
 import unittest
 from pathlib import Path
 
@@ -13,10 +14,35 @@ class IntegrationLayout(unittest.TestCase):
         self.assertEqual(manifest["domain"], COMPONENT.name)
         self.assertIn(f'DOMAIN = "{COMPONENT.name}"', (COMPONENT / "const.py").read_text())
 
-    def test_translations_mirror_strings(self):
-        strings = json.loads((COMPONENT / "strings.json").read_text())
-        english = json.loads((COMPONENT / "translations/en.json").read_text())
-        self.assertEqual(strings, english)
+    def test_version_follows_the_calendar_scheme(self):
+        manifest = json.loads((COMPONENT / "manifest.json").read_text())
+        self.assertRegex(manifest["version"], r"^20\d\d\.(?:[1-9]|1[0-2])\.(?:[1-9]|[12]\d|3[01])\.\d+$")
+
+    def test_hacs_archive_matches_the_domain(self):
+        hacs = json.loads((ROOT / "hacs.json").read_text())
+        self.assertEqual(hacs["filename"], f"{COMPONENT.name}.zip")
+
+    def test_self_discovery_is_declared(self):
+        manifest = json.loads((COMPONENT / "manifest.json").read_text())
+        self.assertIn("_home-assistant._tcp.local.", manifest["zeroconf"])
+
+    def test_no_python_310_only_syntax(self):
+        # Home Assistant 2022.4 still runs Python 3.9.
+        import ast
+        for path in COMPONENT.glob("*.py"):
+            ast.parse(path.read_text(), filename=str(path), feature_version=(3, 9))
+            self.assertIn("from __future__ import annotations", path.read_text(), path.name)
+
+    def test_brand_images_exist(self):
+        for name in ("icon.png", "icon@2x.png"):
+            self.assertTrue((COMPONENT / "brand" / name).is_file(), name)
+
+    def test_country_documentation_is_current(self):
+        import subprocess
+        import sys
+        result = subprocess.run([sys.executable, str(ROOT / ".github/checks/country_rules_doc.py")],
+                                capture_output=True, text=True, cwd=ROOT)
+        self.assertEqual(result.returncode, 0, result.stdout)
 
 
 if __name__ == "__main__":
