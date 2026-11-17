@@ -1,0 +1,15 @@
+{
+  "name": "Lastik Sezonu",
+  "title": "Lastik değiştirme zamanı",
+  "to_winter": "Şimdi kış lastiği öneriliyor. Yaz lastiğinden kış lastiğine geçme zamanı.",
+  "to_summer": "Şimdi yaz lastiği öneriliyor. Kış lastiğinden yaz lastiğine geçme zamanı.",
+  "reasons": {
+    "legal_period": "Ülkenizde bu dönemde kış lastiği yasal olarak zorunludur.",
+    "snow_expected": "Kar yağıyor veya kar bekleniyor.",
+    "frost_risk": "Don bekleniyor, yollar buzlu olabilir.",
+    "cold_weather": "Ortalama sıcaklık eşiğin altında.",
+    "mild_weather": "Hava bir süredir ılıman.",
+    "season_calendar": "Hava durumu verisi yok; bu, ülkenizdeki olağan kış sezonudur.",
+    "outside_season": "Ülkenizin kış sezonunun dışındayız."
+  }
+}

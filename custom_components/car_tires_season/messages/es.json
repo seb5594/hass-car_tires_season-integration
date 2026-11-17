@@ -1,0 +1,15 @@
+{
+  "name": "Temporada de neumáticos",
+  "title": "Es hora de cambiar los neumáticos",
+  "to_winter": "Ahora se recomiendan los neumáticos de invierno. Es hora de cambiar de verano a invierno.",
+  "to_summer": "Ahora se recomiendan los neumáticos de verano. Es hora de cambiar de invierno a verano.",
+  "reasons": {
+    "legal_period": "En tu país los neumáticos de invierno son obligatorios por ley en este periodo.",
+    "snow_expected": "Está nevando o se espera nieve.",
+    "frost_risk": "Se esperan heladas, las carreteras pueden estar heladas.",
+    "cold_weather": "La temperatura media está por debajo del umbral.",
+    "mild_weather": "El tiempo lleva un tiempo siendo suave.",
+    "season_calendar": "No hay datos meteorológicos; esta es la temporada de invierno habitual en tu país.",
+    "outside_season": "Estamos fuera de la temporada de invierno de tu país."
+  }
+}

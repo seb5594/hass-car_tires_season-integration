@@ -1,0 +1,77 @@
+{
+  "title": "Sezona guma",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sezona guma",
+        "description": "Navedite gdje se vozi automobil. Izvori vremena nisu obavezni: bez njih odlučuju zakonsko zimsko razdoblje i kalendar.",
+        "data": {
+          "name": "Naziv",
+          "country": "Država",
+          "weather_entity": "Entitet vremena",
+          "temperature_entity": "Senzor vanjske temperature"
+        },
+        "data_description": {
+          "country": "Određuje koja se pravila o zimskim gumama primjenjuju.",
+          "weather_entity": "Daje prognozu i trenutačnu temperaturu.",
+          "temperature_entity": "Neobavezno. Koristi se umjesto temperature entiteta vremena."
+        }
+      },
+      "region": {
+        "title": "Regija",
+        "description": "Pravila se razlikuju po regijama. Za sve ostale regije ostavite prazno.",
+        "data": {
+          "region": "Regija"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Postavke",
+        "data": {
+          "region": "Regija",
+          "weather_entity": "Entitet vremena",
+          "temperature_entity": "Senzor vanjske temperature",
+          "temperature_threshold": "Temperaturni prag",
+          "forecast_days": "Broj promatranih dana",
+          "notifications": "Trajna obavijest"
+        },
+        "data_description": {
+          "weather_entity": "Daje prognozu i trenutačnu temperaturu.",
+          "temperature_entity": "Neobavezno. Koristi se umjesto temperature entiteta vremena.",
+          "temperature_threshold": "Prosječna temperatura ispod koje se preporučuju zimske gume (obično 7 °C).",
+          "forecast_days": "Iz koliko dana prognoze (ili proteklih dana) se računa prosjek.",
+          "notifications": "Prikazuje obavijest kad je vrijeme za zamjenu guma."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Preporučene gume",
+        "state": {
+          "summer": "Ljetne gume",
+          "winter": "Zimske gume"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Zamjena guma je na redu"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Montirane gume",
+        "state": {
+          "summer": "Ljetne gume",
+          "winter": "Zimske gume",
+          "all_season": "Cjelogodišnje gume"
+        }
+      }
+    }
+  }
+}

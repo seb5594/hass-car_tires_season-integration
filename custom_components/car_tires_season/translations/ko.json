@@ -1,0 +1,77 @@
+{
+  "title": "타이어 시즌",
+  "config": {
+    "step": {
+      "user": {
+        "title": "타이어 시즌",
+        "description": "차를 운행하는 국가를 지정하세요. 날씨 소스는 선택 사항이며, 없으면 법정 동계 기간과 달력으로 판단합니다.",
+        "data": {
+          "name": "이름",
+          "country": "국가",
+          "weather_entity": "날씨 엔터티",
+          "temperature_entity": "외기 온도 센서"
+        },
+        "data_description": {
+          "country": "적용되는 겨울용 타이어 규정을 결정합니다.",
+          "weather_entity": "예보와 현재 기온을 제공합니다.",
+          "temperature_entity": "선택 사항. 날씨 엔터티의 기온 대신 사용합니다."
+        }
+      },
+      "region": {
+        "title": "지역",
+        "description": "규정은 지역에 따라 다릅니다. 그 밖의 모든 지역은 비워 두세요.",
+        "data": {
+          "region": "지역"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "설정",
+        "data": {
+          "region": "지역",
+          "weather_entity": "날씨 엔터티",
+          "temperature_entity": "외기 온도 센서",
+          "temperature_threshold": "온도 기준값",
+          "forecast_days": "참고할 일수",
+          "notifications": "지속 알림"
+        },
+        "data_description": {
+          "weather_entity": "예보와 현재 기온을 제공합니다.",
+          "temperature_entity": "선택 사항. 날씨 엔터티의 기온 대신 사용합니다.",
+          "temperature_threshold": "겨울용 타이어를 권장하는 평균 기온 상한(보통 7 °C).",
+          "forecast_days": "평균을 계산할 예보(또는 지난) 일수.",
+          "notifications": "타이어를 교체할 시기가 되면 알림을 표시합니다."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "권장 타이어",
+        "state": {
+          "summer": "여름용 타이어",
+          "winter": "겨울용 타이어"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "타이어 교체 시기"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "장착된 타이어",
+        "state": {
+          "summer": "여름용 타이어",
+          "winter": "겨울용 타이어",
+          "all_season": "사계절용 타이어"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Rehvihooaeg",
+  "title": "Aeg rehve vahetada",
+  "to_winter": "Nüüd soovitatakse talverehve. On aeg vahetada suverehvid talverehvide vastu.",
+  "to_summer": "Nüüd soovitatakse suverehve. On aeg vahetada talverehvid suverehvide vastu.",
+  "reasons": {
+    "legal_period": "Sinu riigis on talverehvid sel perioodil seadusega kohustuslikud.",
+    "snow_expected": "Sajab lund või on lund oodata.",
+    "frost_risk": "Oodata on külma, seega võivad teed olla libedad.",
+    "cold_weather": "Keskmine temperatuur on lävest madalam.",
+    "mild_weather": "Ilm on juba mõnda aega olnud leebe.",
+    "season_calendar": "Ilmaandmeid pole; see on sinu riigis tavaline talvehooaeg.",
+    "outside_season": "Praegu pole sinu riigi talvehooaeg."
+  }
+}

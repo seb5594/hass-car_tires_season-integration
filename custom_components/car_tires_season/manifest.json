@@ -1,0 +1,14 @@
+{
+  "domain": "car_tires_season",
+  "name": "Car Tires Season",
+  "after_dependencies": ["weather"],
+  "codeowners": ["@seb5594"],
+  "config_flow": true,
+  "documentation": "https://github.com/seb5594/hass-car_tires_season-integration",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/seb5594/hass-car_tires_season-integration/issues",
+  "requirements": [],
+  "version": "2026.11.17.0",
+  "zeroconf": ["_home-assistant._tcp.local."]
+}

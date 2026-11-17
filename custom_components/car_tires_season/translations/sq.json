@@ -1,0 +1,77 @@
+{
+  "title": "Sezoni i gomave",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sezoni i gomave",
+        "description": "Tregoni ku përdoret makina. Burimet e motit janë opsionale: pa to vendosin periudha ligjore e dimrit dhe kalendari.",
+        "data": {
+          "name": "Emri",
+          "country": "Shteti",
+          "weather_entity": "Entiteti i motit",
+          "temperature_entity": "Sensori i temperaturës së jashtme"
+        },
+        "data_description": {
+          "country": "Përcakton cilat rregulla për gomat e dimrit zbatohen.",
+          "weather_entity": "Jep parashikimin dhe temperaturën aktuale.",
+          "temperature_entity": "Opsionale. Përdoret në vend të temperaturës së entitetit të motit."
+        }
+      },
+      "region": {
+        "title": "Rajoni",
+        "description": "Rregullat ndryshojnë sipas rajonit. Lëreni bosh për të gjitha rajonet e tjera.",
+        "data": {
+          "region": "Rajoni"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Cilësimet",
+        "data": {
+          "region": "Rajoni",
+          "weather_entity": "Entiteti i motit",
+          "temperature_entity": "Sensori i temperaturës së jashtme",
+          "temperature_threshold": "Pragu i temperaturës",
+          "forecast_days": "Ditët e shqyrtuara",
+          "notifications": "Njoftim i përhershëm"
+        },
+        "data_description": {
+          "weather_entity": "Jep parashikimin dhe temperaturën aktuale.",
+          "temperature_entity": "Opsionale. Përdoret në vend të temperaturës së entitetit të motit.",
+          "temperature_threshold": "Temperatura mesatare nën të cilën rekomandohen gomat e dimrit (zakonisht 7 °C).",
+          "forecast_days": "Nga sa ditë parashikimi (ose ditë të kaluara) llogaritet mesatarja.",
+          "notifications": "Shfaq një njoftim kur është koha për të ndërruar gomat."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Gomat e rekomanduara",
+        "state": {
+          "summer": "Goma të verës",
+          "winter": "Goma të dimrit"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Ndërrimi i gomave është i detyrueshëm"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Gomat e montuara",
+        "state": {
+          "summer": "Goma të verës",
+          "winter": "Goma të dimrit",
+          "all_season": "Goma për të gjitha stinët"
+        }
+      }
+    }
+  }
+}

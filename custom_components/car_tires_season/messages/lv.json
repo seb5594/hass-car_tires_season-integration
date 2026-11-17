@@ -1,0 +1,15 @@
+{
+  "name": "Riepu sezona",
+  "title": "Laiks mainīt riepas",
+  "to_winter": "Tagad ieteicamas ziemas riepas. Laiks pāriet no vasaras uz ziemas riepām.",
+  "to_summer": "Tagad ieteicamas vasaras riepas. Laiks pāriet no ziemas uz vasaras riepām.",
+  "reasons": {
+    "legal_period": "Jūsu valstī šajā periodā ziemas riepas ir obligātas ar likumu.",
+    "snow_expected": "Snieg vai tiek gaidīts sniegs.",
+    "frost_risk": "Gaidāms sals, tāpēc ceļi var būt apledojuši.",
+    "cold_weather": "Vidējā temperatūra ir zem sliekšņa.",
+    "mild_weather": "Laiks jau kādu laiku ir maigs.",
+    "season_calendar": "Laika apstākļu datu nav; šī ir ierastā ziemas sezona jūsu valstī.",
+    "outside_season": "Šobrīd nav jūsu valsts ziemas sezona."
+  }
+}

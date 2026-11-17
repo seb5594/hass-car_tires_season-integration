@@ -1,0 +1,77 @@
+{
+  "title": "Padangų sezonas",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Padangų sezonas",
+        "description": "Nurodykite, kur važinėjama automobiliu. Orų šaltiniai neprivalomi: be jų lemia įstatymais nustatytas žiemos laikotarpis ir kalendorius.",
+        "data": {
+          "name": "Pavadinimas",
+          "country": "Šalis",
+          "weather_entity": "Orų objektas",
+          "temperature_entity": "Lauko temperatūros jutiklis"
+        },
+        "data_description": {
+          "country": "Nustato, kokios žieminių padangų taisyklės galioja.",
+          "weather_entity": "Pateikia prognozę ir dabartinę temperatūrą.",
+          "temperature_entity": "Neprivaloma. Naudojama vietoj orų objekto temperatūros."
+        }
+      },
+      "region": {
+        "title": "Regionas",
+        "description": "Taisyklės skiriasi pagal regioną. Visiems kitiems regionams palikite tuščią.",
+        "data": {
+          "region": "Regionas"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Nustatymai",
+        "data": {
+          "region": "Regionas",
+          "weather_entity": "Orų objektas",
+          "temperature_entity": "Lauko temperatūros jutiklis",
+          "temperature_threshold": "Temperatūros riba",
+          "forecast_days": "Vertinamos dienos",
+          "notifications": "Nuolatinis pranešimas"
+        },
+        "data_description": {
+          "weather_entity": "Pateikia prognozę ir dabartinę temperatūrą.",
+          "temperature_entity": "Neprivaloma. Naudojama vietoj orų objekto temperatūros.",
+          "temperature_threshold": "Vidutinė temperatūra, žemiau kurios rekomenduojamos žieminės padangos (paprastai 7 °C).",
+          "forecast_days": "Iš kelių prognozės (arba praėjusių) dienų skaičiuojamas vidurkis.",
+          "notifications": "Rodo pranešimą, kai metas keisti padangas."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Rekomenduojamos padangos",
+        "state": {
+          "summer": "Vasarinės padangos",
+          "winter": "Žieminės padangos"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Metas keisti padangas"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Uždėtos padangos",
+        "state": {
+          "summer": "Vasarinės padangos",
+          "winter": "Žieminės padangos",
+          "all_season": "Visų sezonų padangos"
+        }
+      }
+    }
+  }
+}

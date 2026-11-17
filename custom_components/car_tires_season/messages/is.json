@@ -1,0 +1,15 @@
+{
+  "name": "Dekkjatímabil",
+  "title": "Tími til að skipta um dekk",
+  "to_winter": "Vetrardekk eru ráðlögð núna. Kominn er tími til að skipta úr sumardekkjum í vetrardekk.",
+  "to_summer": "Sumardekk eru ráðlögð núna. Kominn er tími til að skipta úr vetrardekkjum í sumardekk.",
+  "reasons": {
+    "legal_period": "Í þínu landi eru vetrardekk lögbundin á þessu tímabili.",
+    "snow_expected": "Það snjóar eða snjókoma er í kortunum.",
+    "frost_risk": "Frosts er að vænta og því geta vegir verið hálir.",
+    "cold_weather": "Meðalhitinn er undir hitamörkunum.",
+    "mild_weather": "Veðrið hefur verið milt um nokkurt skeið.",
+    "season_calendar": "Engin veðurgögn eru til staðar; þetta er hefðbundið vetrartímabil í þínu landi.",
+    "outside_season": "Nú er utan vetrartímabils í þínu landi."
+  }
+}

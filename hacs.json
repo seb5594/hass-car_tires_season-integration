@@ -1,0 +1,7 @@
+{
+  "name": "Car Tires Season",
+  "homeassistant": "2022.4.0",
+  "render_readme": true,
+  "zip_release": true,
+  "filename": "car_tires_season.zip"
+}

@@ -1,0 +1,77 @@
+{
+  "title": "Däcksäsong",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Däcksäsong",
+        "description": "Ange var bilen körs. Väderkällor är valfria: utan dem avgör den lagstadgade vinterperioden och kalendern.",
+        "data": {
+          "name": "Namn",
+          "country": "Land",
+          "weather_entity": "Väderenhet",
+          "temperature_entity": "Utomhustemperatursensor"
+        },
+        "data_description": {
+          "country": "Avgör vilka regler för vinterdäck som gäller.",
+          "weather_entity": "Ger prognosen och aktuell temperatur.",
+          "temperature_entity": "Valfri. Används i stället för väderenhetens temperatur."
+        }
+      },
+      "region": {
+        "title": "Region",
+        "description": "Reglerna skiljer sig mellan regioner. Lämna tomt för alla andra regioner.",
+        "data": {
+          "region": "Region"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Inställningar",
+        "data": {
+          "region": "Region",
+          "weather_entity": "Väderenhet",
+          "temperature_entity": "Utomhustemperatursensor",
+          "temperature_threshold": "Temperaturgräns",
+          "forecast_days": "Dagar att ta med",
+          "notifications": "Permanent avisering"
+        },
+        "data_description": {
+          "weather_entity": "Ger prognosen och aktuell temperatur.",
+          "temperature_entity": "Valfri. Används i stället för väderenhetens temperatur.",
+          "temperature_threshold": "Medeltemperatur under vilken vinterdäck rekommenderas (vanligtvis 7 °C).",
+          "forecast_days": "Över hur många dagars prognos (eller tidigare dagar) medelvärdet beräknas.",
+          "notifications": "Visar en avisering när det är dags att byta däck."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Rekommenderade däck",
+        "state": {
+          "summer": "Sommardäck",
+          "winter": "Vinterdäck"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Däckbyte aktuellt"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Monterade däck",
+        "state": {
+          "summer": "Sommardäck",
+          "winter": "Vinterdäck",
+          "all_season": "Helårsdäck"
+        }
+      }
+    }
+  }
+}

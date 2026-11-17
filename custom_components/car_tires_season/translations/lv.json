@@ -1,0 +1,77 @@
+{
+  "title": "Riepu sezona",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Riepu sezona",
+        "description": "Norādiet, kur tiek izmantots auto. Laika apstākļu avoti nav obligāti: bez tiem lēmumu pieņem likumā noteiktais ziemas periods un kalendārs.",
+        "data": {
+          "name": "Nosaukums",
+          "country": "Valsts",
+          "weather_entity": "Laika apstākļu vienība",
+          "temperature_entity": "Āra temperatūras sensors"
+        },
+        "data_description": {
+          "country": "Nosaka, kuri noteikumi par ziemas riepām ir spēkā.",
+          "weather_entity": "Nodrošina prognozi un pašreizējo temperatūru.",
+          "temperature_entity": "Neobligāti. Tiek izmantots laika apstākļu vienības temperatūras vietā."
+        }
+      },
+      "region": {
+        "title": "Reģions",
+        "description": "Noteikumi atšķiras pa reģioniem. Visiem pārējiem reģioniem atstājiet tukšu.",
+        "data": {
+          "region": "Reģions"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Iestatījumi",
+        "data": {
+          "region": "Reģions",
+          "weather_entity": "Laika apstākļu vienība",
+          "temperature_entity": "Āra temperatūras sensors",
+          "temperature_threshold": "Temperatūras slieksnis",
+          "forecast_days": "Ņemamās dienas",
+          "notifications": "Pastāvīgs paziņojums"
+        },
+        "data_description": {
+          "weather_entity": "Nodrošina prognozi un pašreizējo temperatūru.",
+          "temperature_entity": "Neobligāti. Tiek izmantots laika apstākļu vienības temperatūras vietā.",
+          "temperature_threshold": "Vidējā temperatūra, zem kuras ieteicamas ziemas riepas (parasti 7 °C).",
+          "forecast_days": "No cik prognozes (vai pagājušām) dienām tiek aprēķināts vidējais.",
+          "notifications": "Parāda paziņojumu, kad pienācis laiks mainīt riepas."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Ieteicamās riepas",
+        "state": {
+          "summer": "Vasaras riepas",
+          "winter": "Ziemas riepas"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Jāmaina riepas"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Uzliktās riepas",
+        "state": {
+          "summer": "Vasaras riepas",
+          "winter": "Ziemas riepas",
+          "all_season": "Visu sezonu riepas"
+        }
+      }
+    }
+  }
+}

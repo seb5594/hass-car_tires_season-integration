@@ -1,0 +1,77 @@
+{
+  "title": "Bandenseizoen",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Bandenseizoen",
+        "description": "Geef aan waar de auto rijdt. Weerbronnen zijn optioneel: zonder die bepalen de wettelijke winterperiode en de kalender de uitkomst.",
+        "data": {
+          "name": "Naam",
+          "country": "Land",
+          "weather_entity": "Weerentiteit",
+          "temperature_entity": "Buitentemperatuursensor"
+        },
+        "data_description": {
+          "country": "Bepaalt welke regels voor winterbanden gelden.",
+          "weather_entity": "Levert de voorspelling en de actuele temperatuur.",
+          "temperature_entity": "Optioneel. Wordt gebruikt in plaats van de temperatuur van de weerentiteit."
+        }
+      },
+      "region": {
+        "title": "Regio",
+        "description": "De regels verschillen per regio. Laat leeg voor alle andere regio's.",
+        "data": {
+          "region": "Regio"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Instellingen",
+        "data": {
+          "region": "Regio",
+          "weather_entity": "Weerentiteit",
+          "temperature_entity": "Buitentemperatuursensor",
+          "temperature_threshold": "Temperatuurdrempel",
+          "forecast_days": "Te bekijken dagen",
+          "notifications": "Permanente melding"
+        },
+        "data_description": {
+          "weather_entity": "Levert de voorspelling en de actuele temperatuur.",
+          "temperature_entity": "Optioneel. Wordt gebruikt in plaats van de temperatuur van de weerentiteit.",
+          "temperature_threshold": "Gemiddelde temperatuur waaronder winterbanden worden aanbevolen (meestal 7 °C).",
+          "forecast_days": "Over hoeveel dagen voorspelling (of afgelopen dagen) wordt gemiddeld.",
+          "notifications": "Toont een melding wanneer het tijd is om van banden te wisselen."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Aanbevolen banden",
+        "state": {
+          "summer": "Zomerbanden",
+          "winter": "Winterbanden"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Bandenwissel nodig"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Gemonteerde banden",
+        "state": {
+          "summer": "Zomerbanden",
+          "winter": "Winterbanden",
+          "all_season": "Vierseizoenenbanden"
+        }
+      }
+    }
+  }
+}

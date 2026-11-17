@@ -1,0 +1,15 @@
+{
+  "name": "Sezon opon",
+  "title": "Czas na wymianę opon",
+  "to_winter": "Teraz zalecane są opony zimowe. Czas zmienić opony letnie na zimowe.",
+  "to_summer": "Teraz zalecane są opony letnie. Czas zmienić opony zimowe na letnie.",
+  "reasons": {
+    "legal_period": "W Twoim kraju w tym okresie opony zimowe są obowiązkowe z mocy prawa.",
+    "snow_expected": "Pada śnieg lub zapowiadane są opady śniegu.",
+    "frost_risk": "Zapowiadane są przymrozki, więc drogi mogą być oblodzone.",
+    "cold_weather": "Średnia temperatura jest poniżej progu.",
+    "mild_weather": "Od jakiegoś czasu pogoda jest łagodna.",
+    "season_calendar": "Brak danych pogodowych; to typowy sezon zimowy w Twoim kraju.",
+    "outside_season": "Trwa okres poza sezonem zimowym w Twoim kraju."
+  }
+}

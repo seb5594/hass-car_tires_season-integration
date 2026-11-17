@@ -1,0 +1,77 @@
+{
+  "title": "Saison des pneus",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Saison des pneus",
+        "description": "Indiquez où la voiture circule. Les sources météo sont facultatives : sans elles, la période hivernale légale et le calendrier décident.",
+        "data": {
+          "name": "Nom",
+          "country": "Pays",
+          "weather_entity": "Entité météo",
+          "temperature_entity": "Capteur de température extérieure"
+        },
+        "data_description": {
+          "country": "Détermine les règles applicables aux pneus hiver.",
+          "weather_entity": "Fournit les prévisions et la température actuelle.",
+          "temperature_entity": "Facultatif. Remplace la température de l'entité météo."
+        }
+      },
+      "region": {
+        "title": "Région",
+        "description": "Les règles varient selon la région. Laissez vide pour toutes les autres régions.",
+        "data": {
+          "region": "Région"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Réglages",
+        "data": {
+          "region": "Région",
+          "weather_entity": "Entité météo",
+          "temperature_entity": "Capteur de température extérieure",
+          "temperature_threshold": "Seuil de température",
+          "forecast_days": "Jours analysés",
+          "notifications": "Notification persistante"
+        },
+        "data_description": {
+          "weather_entity": "Fournit les prévisions et la température actuelle.",
+          "temperature_entity": "Facultatif. Remplace la température de l'entité météo.",
+          "temperature_threshold": "Température moyenne en dessous de laquelle les pneus hiver sont conseillés (généralement 7 °C).",
+          "forecast_days": "Nombre de jours de prévisions (ou de jours passés) pris en compte pour la moyenne.",
+          "notifications": "Affiche une notification quand il est temps de changer de pneus."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Pneus recommandés",
+        "state": {
+          "summer": "Pneus été",
+          "winter": "Pneus hiver"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Changement de pneus à faire"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Pneus montés",
+        "state": {
+          "summer": "Pneus été",
+          "winter": "Pneus hiver",
+          "all_season": "Pneus toutes saisons"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "title": "Dekkjatímabil",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Dekkjatímabil",
+        "description": "Tilgreindu hvar bíllinn er notaður. Veðurgjafar eru valfrjálsir: án þeirra ráða lögbundið vetrartímabil og dagatalið.",
+        "data": {
+          "name": "Nafn",
+          "country": "Land",
+          "weather_entity": "Veðureining",
+          "temperature_entity": "Hitaskynjari utandyra"
+        },
+        "data_description": {
+          "country": "Ákvarðar hvaða reglur um vetrardekk gilda.",
+          "weather_entity": "Gefur veðurspána og núverandi hitastig.",
+          "temperature_entity": "Valfrjálst. Notað í stað hitastigs veðureiningarinnar."
+        }
+      },
+      "region": {
+        "title": "Svæði",
+        "description": "Reglur eru mismunandi eftir svæðum. Skildu eftir autt fyrir öll önnur svæði.",
+        "data": {
+          "region": "Svæði"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Stillingar",
+        "data": {
+          "region": "Svæði",
+          "weather_entity": "Veðureining",
+          "temperature_entity": "Hitaskynjari utandyra",
+          "temperature_threshold": "Hitamörk",
+          "forecast_days": "Dagar sem eru skoðaðir",
+          "notifications": "Varanleg tilkynning"
+        },
+        "data_description": {
+          "weather_entity": "Gefur veðurspána og núverandi hitastig.",
+          "temperature_entity": "Valfrjálst. Notað í stað hitastigs veðureiningarinnar.",
+          "temperature_threshold": "Meðalhiti sem vetrardekk eru ráðlögð undir (yfirleitt 7 °C).",
+          "forecast_days": "Yfir hversu marga daga spár (eða liðna daga) meðaltalið er reiknað.",
+          "notifications": "Sýnir tilkynningu þegar kominn er tími til að skipta um dekk."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Ráðlögð dekk",
+        "state": {
+          "summer": "Sumardekk",
+          "winter": "Vetrardekk"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Dekkjaskipti tímabær"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Dekk á bílnum",
+        "state": {
+          "summer": "Sumardekk",
+          "winter": "Vetrardekk",
+          "all_season": "Heilsársdekk"
+        }
+      }
+    }
+  }
+}

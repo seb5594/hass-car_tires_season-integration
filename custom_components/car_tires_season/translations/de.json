@@ -1,0 +1,77 @@
+{
+  "title": "Autoreifen Saison",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Autoreifen Saison",
+        "description": "Lege fest, wo das Auto gefahren wird. Wetterquellen sind optional: Ohne sie entscheiden die gesetzliche Winterzeit und der Kalender.",
+        "data": {
+          "name": "Name",
+          "country": "Land",
+          "weather_entity": "Wetter-Entität",
+          "temperature_entity": "Außentemperatur-Sensor"
+        },
+        "data_description": {
+          "country": "Bestimmt, welche Winterreifen-Regeln gelten.",
+          "weather_entity": "Liefert die Vorhersage und die aktuelle Temperatur.",
+          "temperature_entity": "Optional. Wird statt der Temperatur der Wetter-Entität verwendet."
+        }
+      },
+      "region": {
+        "title": "Region",
+        "description": "Die Regeln unterscheiden sich je nach Region. Für alle übrigen Regionen leer lassen.",
+        "data": {
+          "region": "Region"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Einstellungen",
+        "data": {
+          "region": "Region",
+          "weather_entity": "Wetter-Entität",
+          "temperature_entity": "Außentemperatur-Sensor",
+          "temperature_threshold": "Temperaturschwelle",
+          "forecast_days": "Betrachtete Tage",
+          "notifications": "Dauerhafte Benachrichtigung"
+        },
+        "data_description": {
+          "weather_entity": "Liefert die Vorhersage und die aktuelle Temperatur.",
+          "temperature_entity": "Optional. Wird statt der Temperatur der Wetter-Entität verwendet.",
+          "temperature_threshold": "Durchschnittstemperatur, unter der Winterreifen empfohlen werden (üblicherweise 7 °C).",
+          "forecast_days": "Über wie viele Tage der Vorhersage (oder vergangene Tage) gemittelt wird.",
+          "notifications": "Zeigt eine Benachrichtigung, wenn es Zeit für den Reifenwechsel ist."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Empfohlene Reifen",
+        "state": {
+          "summer": "Sommerreifen",
+          "winter": "Winterreifen"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Reifenwechsel fällig"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Montierte Reifen",
+        "state": {
+          "summer": "Sommerreifen",
+          "winter": "Winterreifen",
+          "all_season": "Ganzjahresreifen"
+        }
+      }
+    }
+  }
+}

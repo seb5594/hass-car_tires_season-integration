@@ -1,0 +1,15 @@
+{
+  "name": "Bandenseizoen",
+  "title": "Tijd om van banden te wisselen",
+  "to_winter": "Winterbanden worden nu aanbevolen. Tijd om van zomer- naar winterbanden te wisselen.",
+  "to_summer": "Zomerbanden worden nu aanbevolen. Tijd om van winter- naar zomerbanden te wisselen.",
+  "reasons": {
+    "legal_period": "In jouw land zijn winterbanden in deze periode wettelijk verplicht.",
+    "snow_expected": "Het sneeuwt of er wordt sneeuw verwacht.",
+    "frost_risk": "Er wordt vorst verwacht, wegen kunnen glad zijn.",
+    "cold_weather": "De gemiddelde temperatuur ligt onder de drempel.",
+    "mild_weather": "Het weer is al een tijdje zacht.",
+    "season_calendar": "Er zijn geen weergegevens; dit is het gebruikelijke winterseizoen in jouw land.",
+    "outside_season": "Het is buiten het winterseizoen van jouw land."
+  }
+}

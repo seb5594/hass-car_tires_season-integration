@@ -1,0 +1,77 @@
+{
+  "title": "Dekksesong",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Dekksesong",
+        "description": "Oppgi hvor bilen kjøres. Værkilder er valgfrie: Uten dem avgjør lovfestet vinterperiode og kalenderen.",
+        "data": {
+          "name": "Navn",
+          "country": "Land",
+          "weather_entity": "Værenhet",
+          "temperature_entity": "Utendørs temperatursensor"
+        },
+        "data_description": {
+          "country": "Bestemmer hvilke regler for vinterdekk som gjelder.",
+          "weather_entity": "Leverer værmeldingen og gjeldende temperatur.",
+          "temperature_entity": "Valgfri. Brukes i stedet for temperaturen til værenheten."
+        }
+      },
+      "region": {
+        "title": "Region",
+        "description": "Reglene varierer fra region til region. La feltet stå tomt for alle andre regioner.",
+        "data": {
+          "region": "Region"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Innstillinger",
+        "data": {
+          "region": "Region",
+          "weather_entity": "Værenhet",
+          "temperature_entity": "Utendørs temperatursensor",
+          "temperature_threshold": "Temperaturgrense",
+          "forecast_days": "Dager som tas med",
+          "notifications": "Varig varsel"
+        },
+        "data_description": {
+          "weather_entity": "Leverer værmeldingen og gjeldende temperatur.",
+          "temperature_entity": "Valgfri. Brukes i stedet for temperaturen til værenheten.",
+          "temperature_threshold": "Gjennomsnittstemperatur under som vinterdekk anbefales (vanligvis 7 °C).",
+          "forecast_days": "Over hvor mange dager med værmelding (eller tidligere dager) gjennomsnittet beregnes.",
+          "notifications": "Viser et varsel når det er på tide å bytte dekk."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Anbefalte dekk",
+        "state": {
+          "summer": "Sommerdekk",
+          "winter": "Vinterdekk"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Dekkskifte påkrevd"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Monterte dekk",
+        "state": {
+          "summer": "Sommerdekk",
+          "winter": "Vinterdekk",
+          "all_season": "Helårsdekk"
+        }
+      }
+    }
+  }
+}

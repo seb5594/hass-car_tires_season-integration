@@ -1,0 +1,15 @@
+{
+  "name": "Sezóna pneumatík",
+  "title": "Čas na prezutie",
+  "to_winter": "Teraz sa odporúčajú zimné pneumatiky. Je čas prezuť z letných na zimné.",
+  "to_summer": "Teraz sa odporúčajú letné pneumatiky. Je čas prezuť zo zimných na letné.",
+  "reasons": {
+    "legal_period": "Vo vašej krajine sú v tomto období zimné pneumatiky zo zákona povinné.",
+    "snow_expected": "Sneží, alebo sa očakáva sneh.",
+    "frost_risk": "Očakávajú sa mrazy, cesty môžu byť namrznuté.",
+    "cold_weather": "Priemerná teplota je pod prahom.",
+    "mild_weather": "Počasie je už nejaký čas mierne.",
+    "season_calendar": "Údaje o počasí nie sú k dispozícii; toto je obvyklá zimná sezóna vo vašej krajine.",
+    "outside_season": "Je mimo zimnej sezóny vašej krajiny."
+  }
+}

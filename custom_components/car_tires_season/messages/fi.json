@@ -1,0 +1,15 @@
+{
+  "name": "Rengaskausi",
+  "title": "Aika vaihtaa renkaat",
+  "to_winter": "Talvirenkaita suositellaan nyt. On aika vaihtaa kesärenkaista talvirenkaisiin.",
+  "to_summer": "Kesärenkaita suositellaan nyt. On aika vaihtaa talvirenkaista kesärenkaisiin.",
+  "reasons": {
+    "legal_period": "Maassasi talvirenkaat ovat lain mukaan pakolliset tänä ajanjaksona.",
+    "snow_expected": "Sataa lunta tai lunta on odotettavissa.",
+    "frost_risk": "Pakkasta on odotettavissa, joten tiet voivat olla liukkaita.",
+    "cold_weather": "Keskilämpötila on rajan alapuolella.",
+    "mild_weather": "Sää on ollut leuto jo jonkin aikaa.",
+    "season_calendar": "Säätietoja ei ole saatavilla; tämä on maasi tavanomainen talvikausi.",
+    "outside_season": "Nyt ollaan maasi talvikauden ulkopuolella."
+  }
+}

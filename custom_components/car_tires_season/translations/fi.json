@@ -1,0 +1,77 @@
+{
+  "title": "Rengaskausi",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Rengaskausi",
+        "description": "Kerro, missä autoa ajetaan. Säälähteet ovat valinnaisia: ilman niitä ratkaisevat lakisääteinen talvikausi ja kalenteri.",
+        "data": {
+          "name": "Nimi",
+          "country": "Maa",
+          "weather_entity": "Sääkohde",
+          "temperature_entity": "Ulkolämpötila-anturi"
+        },
+        "data_description": {
+          "country": "Määrittää, mitä talvirengassääntöjä sovelletaan.",
+          "weather_entity": "Antaa ennusteen ja nykyisen lämpötilan.",
+          "temperature_entity": "Valinnainen. Käytetään sääkohteen lämpötilan sijaan."
+        }
+      },
+      "region": {
+        "title": "Alue",
+        "description": "Säännöt vaihtelevat alueittain. Jätä tyhjäksi kaikilla muilla alueilla.",
+        "data": {
+          "region": "Alue"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Asetukset",
+        "data": {
+          "region": "Alue",
+          "weather_entity": "Sääkohde",
+          "temperature_entity": "Ulkolämpötila-anturi",
+          "temperature_threshold": "Lämpötilaraja",
+          "forecast_days": "Huomioitavat päivät",
+          "notifications": "Pysyvä ilmoitus"
+        },
+        "data_description": {
+          "weather_entity": "Antaa ennusteen ja nykyisen lämpötilan.",
+          "temperature_entity": "Valinnainen. Käytetään sääkohteen lämpötilan sijaan.",
+          "temperature_threshold": "Keskilämpötila, jonka alapuolella talvirenkaita suositellaan (yleensä 7 °C).",
+          "forecast_days": "Kuinka monen päivän ennusteesta (tai menneistä päivistä) keskiarvo lasketaan.",
+          "notifications": "Näyttää ilmoituksen, kun on aika vaihtaa renkaat."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Suositellut renkaat",
+        "state": {
+          "summer": "Kesärenkaat",
+          "winter": "Talvirenkaat"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Rengasvaihto tehtävä"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Asennetut renkaat",
+        "state": {
+          "summer": "Kesärenkaat",
+          "winter": "Talvirenkaat",
+          "all_season": "Kaikkien vuodenaikojen renkaat"
+        }
+      }
+    }
+  }
+}

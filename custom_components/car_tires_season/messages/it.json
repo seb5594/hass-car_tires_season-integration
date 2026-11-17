@@ -1,0 +1,15 @@
+{
+  "name": "Stagione pneumatici",
+  "title": "È ora di cambiare gli pneumatici",
+  "to_winter": "Ora si consigliano gli pneumatici invernali. È il momento di passare dagli estivi agli invernali.",
+  "to_summer": "Ora si consigliano gli pneumatici estivi. È il momento di passare dagli invernali agli estivi.",
+  "reasons": {
+    "legal_period": "Nel tuo paese, in questo periodo, gli pneumatici invernali sono obbligatori per legge.",
+    "snow_expected": "Sta nevicando o è prevista neve.",
+    "frost_risk": "È previsto gelo, le strade possono essere ghiacciate.",
+    "cold_weather": "La temperatura media è inferiore alla soglia.",
+    "mild_weather": "Da un po' il tempo è mite.",
+    "season_calendar": "Non ci sono dati meteo; questa è la consueta stagione invernale del tuo paese.",
+    "outside_season": "Siamo fuori dalla stagione invernale del tuo paese."
+  }
+}
