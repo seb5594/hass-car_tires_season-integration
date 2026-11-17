@@ -1,7 +1,7 @@
 {
-  "name": "Example Integration",
-  "homeassistant": "2024.4.0",
+  "name": "Car Tires Season",
+  "homeassistant": "2022.4.0",
   "render_readme": true,
   "zip_release": true,
-  "filename": "example_integration.zip"
+  "filename": "car_tires_season.zip"
 }
