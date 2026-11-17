@@ -1,0 +1,14 @@
+{
+  "title": "Time to change your tires",
+  "to_winter": "Winter tires are recommended now. Time to switch from summer tires.",
+  "to_summer": "Summer tires are recommended now. Time to switch from winter tires.",
+  "reasons": {
+    "legal_period": "Winter tires are legally required in your country in this period.",
+    "snow_expected": "Snow is falling or expected.",
+    "frost_risk": "Frost is expected, so roads may be icy.",
+    "cold_weather": "The average temperature is below the threshold.",
+    "mild_weather": "The weather has been mild for a while.",
+    "season_calendar": "No weather data is available; this is the usual winter season in your country.",
+    "outside_season": "It is outside the winter season of your country."
+  }
+}

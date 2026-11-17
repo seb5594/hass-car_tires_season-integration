@@ -1,0 +1,14 @@
+{
+  "title": "Dags att byta däck",
+  "to_winter": "Vinterdäck rekommenderas nu. Det är dags att byta från sommardäck till vinterdäck.",
+  "to_summer": "Sommardäck rekommenderas nu. Det är dags att byta från vinterdäck till sommardäck.",
+  "reasons": {
+    "legal_period": "I ditt land är vinterdäck lagstadgade under den här perioden.",
+    "snow_expected": "Det snöar eller snö väntas.",
+    "frost_risk": "Frost väntas, så vägarna kan vara hala.",
+    "cold_weather": "Medeltemperaturen ligger under gränsen.",
+    "mild_weather": "Vädret har varit milt en tid.",
+    "season_calendar": "Väderdata saknas; detta är den vanliga vintersäsongen i ditt land.",
+    "outside_season": "Det är utanför vintersäsongen i ditt land."
+  }
+}

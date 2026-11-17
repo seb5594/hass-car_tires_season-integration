@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "Navedite, kje se vozi avtomobil. Viri vremena niso obvezni: brez njih odločata zakonsko zimsko obdobje in koledar.",
+        "data": {
+          "name": "Ime",
+          "country": "Država",
+          "weather_entity": "Entiteta vremena",
+          "temperature_entity": "Senzor zunanje temperature"
+        },
+        "data_description": {
+          "country": "Določa, katera pravila o zimskih pnevmatikah veljajo.",
+          "weather_entity": "Zagotavlja napoved in trenutno temperaturo.",
+          "temperature_entity": "Izbirno. Uporabi se namesto temperature entitete vremena."
+        }
+      },
+      "region": {
+        "title": "Regija",
+        "description": "Pravila se razlikujejo po regijah. Za vse druge regije pustite prazno.",
+        "data": {
+          "region": "Regija"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Nastavitve",
+        "data": {
+          "region": "Regija",
+          "weather_entity": "Entiteta vremena",
+          "temperature_entity": "Senzor zunanje temperature",
+          "temperature_threshold": "Temperaturni prag",
+          "forecast_days": "Število upoštevanih dni",
+          "notifications": "Trajno obvestilo"
+        },
+        "data_description": {
+          "weather_entity": "Zagotavlja napoved in trenutno temperaturo.",
+          "temperature_entity": "Izbirno. Uporabi se namesto temperature entitete vremena.",
+          "temperature_threshold": "Povprečna temperatura, pod katero so priporočene zimske pnevmatike (običajno 7 °C).",
+          "forecast_days": "Iz koliko dni napovedi (ali preteklih dni) se izračuna povprečje.",
+          "notifications": "Prikaže obvestilo, ko je čas za menjavo pnevmatik."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Priporočene pnevmatike",
+        "state": {
+          "summer": "Letne pnevmatike",
+          "winter": "Zimske pnevmatike"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Menjava pnevmatik je na vrsti"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Nameščene pnevmatike",
+        "state": {
+          "summer": "Letne pnevmatike",
+          "winter": "Zimske pnevmatike",
+          "all_season": "Celoletne pnevmatike"
+        }
+      }
+    }
+  }
+}

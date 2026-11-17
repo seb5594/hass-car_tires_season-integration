@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "車を使う国を指定してください。天気ソースは任意です。指定しない場合は、法定の冬季期間とカレンダーで判断します。",
+        "data": {
+          "name": "名前",
+          "country": "国",
+          "weather_entity": "天気エンティティ",
+          "temperature_entity": "屋外温度センサー"
+        },
+        "data_description": {
+          "country": "適用される冬用タイヤの規則を決めます。",
+          "weather_entity": "天気予報と現在の気温を提供します。",
+          "temperature_entity": "任意。天気エンティティの気温の代わりに使用します。"
+        }
+      },
+      "region": {
+        "title": "地域",
+        "description": "規則は地域によって異なります。それ以外の地域は空欄のままにしてください。",
+        "data": {
+          "region": "地域"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "設定",
+        "data": {
+          "region": "地域",
+          "weather_entity": "天気エンティティ",
+          "temperature_entity": "屋外温度センサー",
+          "temperature_threshold": "気温のしきい値",
+          "forecast_days": "参照する日数",
+          "notifications": "永続通知"
+        },
+        "data_description": {
+          "weather_entity": "天気予報と現在の気温を提供します。",
+          "temperature_entity": "任意。天気エンティティの気温の代わりに使用します。",
+          "temperature_threshold": "冬用タイヤを推奨する平均気温の上限(通常は7 °C)。",
+          "forecast_days": "平均を求める予報(または過去)の日数。",
+          "notifications": "タイヤ交換の時期になると通知を表示します。"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "推奨タイヤ",
+        "state": {
+          "summer": "夏タイヤ",
+          "winter": "冬タイヤ"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "タイヤ交換の時期"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "装着中のタイヤ",
+        "state": {
+          "summer": "夏タイヤ",
+          "winter": "冬タイヤ",
+          "all_season": "オールシーズンタイヤ"
+        }
+      }
+    }
+  }
+}

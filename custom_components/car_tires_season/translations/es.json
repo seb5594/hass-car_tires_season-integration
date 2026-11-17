@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "Indica dónde se conduce el coche. Las fuentes meteorológicas son opcionales: sin ellas deciden el periodo invernal legal y el calendario.",
+        "data": {
+          "name": "Nombre",
+          "country": "País",
+          "weather_entity": "Entidad meteorológica",
+          "temperature_entity": "Sensor de temperatura exterior"
+        },
+        "data_description": {
+          "country": "Determina qué normas sobre neumáticos de invierno se aplican.",
+          "weather_entity": "Proporciona la previsión y la temperatura actual.",
+          "temperature_entity": "Opcional. Se usa en lugar de la temperatura de la entidad meteorológica."
+        }
+      },
+      "region": {
+        "title": "Región",
+        "description": "Las normas varían según la región. Déjalo vacío para el resto de regiones.",
+        "data": {
+          "region": "Región"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Ajustes",
+        "data": {
+          "region": "Región",
+          "weather_entity": "Entidad meteorológica",
+          "temperature_entity": "Sensor de temperatura exterior",
+          "temperature_threshold": "Umbral de temperatura",
+          "forecast_days": "Días analizados",
+          "notifications": "Notificación persistente"
+        },
+        "data_description": {
+          "weather_entity": "Proporciona la previsión y la temperatura actual.",
+          "temperature_entity": "Opcional. Se usa en lugar de la temperatura de la entidad meteorológica.",
+          "temperature_threshold": "Temperatura media por debajo de la cual se recomiendan los neumáticos de invierno (normalmente 7 °C).",
+          "forecast_days": "Cuántos días de previsión (o días pasados) se promedian.",
+          "notifications": "Muestra una notificación cuando es hora de cambiar los neumáticos."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Neumáticos recomendados",
+        "state": {
+          "summer": "Neumáticos de verano",
+          "winter": "Neumáticos de invierno"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Cambio de neumáticos pendiente"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Neumáticos montados",
+        "state": {
+          "summer": "Neumáticos de verano",
+          "winter": "Neumáticos de invierno",
+          "all_season": "Neumáticos para todas las estaciones"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": "På tide å bytte dekk",
+  "to_winter": "Vinterdekk anbefales nå. På tide å bytte fra sommerdekk til vinterdekk.",
+  "to_summer": "Sommerdekk anbefales nå. På tide å bytte fra vinterdekk til sommerdekk.",
+  "reasons": {
+    "legal_period": "I landet ditt er det krav om vinterdekk i denne perioden.",
+    "snow_expected": "Det snør, eller det er meldt snø.",
+    "frost_risk": "Det er meldt frost, så veiene kan være glatte.",
+    "cold_weather": "Gjennomsnittstemperaturen ligger under grensen.",
+    "mild_weather": "Været har vært mildt en stund.",
+    "season_calendar": "Det finnes ingen værdata; dette er den vanlige vintersesongen i landet ditt.",
+    "outside_season": "Det er utenfor vintersesongen i landet ditt."
+  }
+}

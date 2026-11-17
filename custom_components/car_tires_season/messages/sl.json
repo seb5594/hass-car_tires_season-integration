@@ -1,0 +1,14 @@
+{
+  "title": "Čas je za menjavo pnevmatik",
+  "to_winter": "Zdaj so priporočene zimske pnevmatike. Čas je za prehod z letnih na zimske.",
+  "to_summer": "Zdaj so priporočene letne pnevmatike. Čas je za prehod z zimskih na letne.",
+  "reasons": {
+    "legal_period": "V vaši državi so v tem obdobju zimske pnevmatike zakonsko obvezne.",
+    "snow_expected": "Sneži ali pa je napovedan sneg.",
+    "frost_risk": "Napovedan je mraz, zato so ceste lahko poledenele.",
+    "cold_weather": "Povprečna temperatura je pod pragom.",
+    "mild_weather": "Vreme je že nekaj časa milo.",
+    "season_calendar": "Podatkov o vremenu ni; to je običajna zimska sezona v vaši državi.",
+    "outside_season": "Smo zunaj zimske sezone vaše države."
+  }
+}

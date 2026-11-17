@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "请指定车辆行驶的国家。天气来源为可选项:未提供时,由法定冬季期间和日历决定。",
+        "data": {
+          "name": "名称",
+          "country": "国家/地区",
+          "weather_entity": "天气实体",
+          "temperature_entity": "室外温度传感器"
+        },
+        "data_description": {
+          "country": "决定适用哪些冬季轮胎规定。",
+          "weather_entity": "提供天气预报和当前温度。",
+          "temperature_entity": "可选。用于代替天气实体的温度。"
+        }
+      },
+      "region": {
+        "title": "地区",
+        "description": "各地区规定不同。其他所有地区请留空。",
+        "data": {
+          "region": "地区"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "设置",
+        "data": {
+          "region": "地区",
+          "weather_entity": "天气实体",
+          "temperature_entity": "室外温度传感器",
+          "temperature_threshold": "温度阈值",
+          "forecast_days": "参考天数",
+          "notifications": "持久通知"
+        },
+        "data_description": {
+          "weather_entity": "提供天气预报和当前温度。",
+          "temperature_entity": "可选。用于代替天气实体的温度。",
+          "temperature_threshold": "低于该平均温度时推荐使用冬季轮胎(通常为 7 °C)。",
+          "forecast_days": "计算平均值所用的预报(或过去)天数。",
+          "notifications": "到了更换轮胎的时间时显示通知。"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "推荐轮胎",
+        "state": {
+          "summer": "夏季轮胎",
+          "winter": "冬季轮胎"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "需要换胎"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "当前安装的轮胎",
+        "state": {
+          "summer": "夏季轮胎",
+          "winter": "冬季轮胎",
+          "all_season": "四季轮胎"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "Add meg, hol használod az autót. Az időjárási források nem kötelezők: nélkülük a törvényes téli időszak és a naptár dönt.",
+        "data": {
+          "name": "Név",
+          "country": "Ország",
+          "weather_entity": "Időjárás-entitás",
+          "temperature_entity": "Kültéri hőmérséklet-érzékelő"
+        },
+        "data_description": {
+          "country": "Meghatározza, mely téli gumira vonatkozó szabályok érvényesek.",
+          "weather_entity": "Megadja az előrejelzést és az aktuális hőmérsékletet.",
+          "temperature_entity": "Nem kötelező. Az időjárás-entitás hőmérséklete helyett használatos."
+        }
+      },
+      "region": {
+        "title": "Régió",
+        "description": "A szabályok régiónként eltérnek. Minden más régiónál hagyd üresen.",
+        "data": {
+          "region": "Régió"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Beállítások",
+        "data": {
+          "region": "Régió",
+          "weather_entity": "Időjárás-entitás",
+          "temperature_entity": "Kültéri hőmérséklet-érzékelő",
+          "temperature_threshold": "Hőmérsékleti küszöb",
+          "forecast_days": "Figyelembe vett napok",
+          "notifications": "Tartós értesítés"
+        },
+        "data_description": {
+          "weather_entity": "Megadja az előrejelzést és az aktuális hőmérsékletet.",
+          "temperature_entity": "Nem kötelező. Az időjárás-entitás hőmérséklete helyett használatos.",
+          "temperature_threshold": "Az átlaghőmérséklet, amely alatt téli gumi ajánlott (általában 7 °C).",
+          "forecast_days": "Hány nap előrejelzéséből (vagy elmúlt napból) számít átlag.",
+          "notifications": "Értesítést jelenít meg, amikor ideje gumiabroncsot cserélni."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Ajánlott gumik",
+        "state": {
+          "summer": "Nyári gumi",
+          "winter": "Téli gumi"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Gumicsere esedékes"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Felszerelt gumik",
+        "state": {
+          "summer": "Nyári gumi",
+          "winter": "Téli gumi",
+          "all_season": "Négyévszakos gumi"
+        }
+      }
+    }
+  }
+}

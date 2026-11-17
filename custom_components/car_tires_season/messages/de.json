@@ -1,0 +1,14 @@
+{
+  "title": "Zeit für den Reifenwechsel",
+  "to_winter": "Jetzt werden Winterreifen empfohlen. Zeit, von Sommer- auf Winterreifen zu wechseln.",
+  "to_summer": "Jetzt werden Sommerreifen empfohlen. Zeit, von Winter- auf Sommerreifen zu wechseln.",
+  "reasons": {
+    "legal_period": "In deinem Land sind in diesem Zeitraum Winterreifen gesetzlich vorgeschrieben.",
+    "snow_expected": "Es schneit oder es wird Schnee erwartet.",
+    "frost_risk": "Es wird Frost erwartet, die Straßen können glatt sein.",
+    "cold_weather": "Die Durchschnittstemperatur liegt unter der Schwelle.",
+    "mild_weather": "Das Wetter ist seit einiger Zeit mild.",
+    "season_calendar": "Es liegen keine Wetterdaten vor; dies ist die übliche Wintersaison in deinem Land.",
+    "outside_season": "Es ist außerhalb der Wintersaison deines Landes."
+  }
+}

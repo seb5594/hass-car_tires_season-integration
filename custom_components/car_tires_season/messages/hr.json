@@ -1,0 +1,14 @@
+{
+  "title": "Vrijeme je za zamjenu guma",
+  "to_winter": "Sada se preporučuju zimske gume. Vrijeme je za prelazak s ljetnih na zimske.",
+  "to_summer": "Sada se preporučuju ljetne gume. Vrijeme je za prelazak sa zimskih na ljetne.",
+  "reasons": {
+    "legal_period": "U vašoj državi zimske su gume u ovom razdoblju zakonski obvezne.",
+    "snow_expected": "Pada snijeg ili se očekuje snijeg.",
+    "frost_risk": "Očekuje se mraz pa ceste mogu biti poledice.",
+    "cold_weather": "Prosječna temperatura ispod je praga.",
+    "mild_weather": "Vrijeme je već neko vrijeme blago.",
+    "season_calendar": "Nema podataka o vremenu; ovo je uobičajena zimska sezona u vašoj državi.",
+    "outside_season": "Izvan smo zimske sezone vaše države."
+  }
+}

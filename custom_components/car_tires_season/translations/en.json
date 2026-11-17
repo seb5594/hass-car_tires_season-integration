@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "Set up where the car is driven. Weather sources are optional: without them the legal winter period and the calendar decide.",
+        "data": {
+          "name": "Name",
+          "country": "Country",
+          "weather_entity": "Weather entity",
+          "temperature_entity": "Outdoor temperature sensor"
+        },
+        "data_description": {
+          "country": "Decides which winter tire rules apply.",
+          "weather_entity": "Provides the forecast and the current temperature.",
+          "temperature_entity": "Optional. Used instead of the temperature of the weather entity."
+        }
+      },
+      "region": {
+        "title": "Region",
+        "description": "The rules differ by region. Leave it empty for all other regions.",
+        "data": {
+          "region": "Region"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Settings",
+        "data": {
+          "region": "Region",
+          "weather_entity": "Weather entity",
+          "temperature_entity": "Outdoor temperature sensor",
+          "temperature_threshold": "Temperature threshold",
+          "forecast_days": "Days to look at",
+          "notifications": "Persistent notification"
+        },
+        "data_description": {
+          "weather_entity": "Provides the forecast and the current temperature.",
+          "temperature_entity": "Optional. Used instead of the temperature of the weather entity.",
+          "temperature_threshold": "Average temperature below which winter tires are recommended (usually 7 °C).",
+          "forecast_days": "How many days of forecast (or past days) are averaged.",
+          "notifications": "Show a notification when it is time to change tires."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Recommended tires",
+        "state": {
+          "summer": "Summer tires",
+          "winter": "Winter tires"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Tire change due"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Mounted tires",
+        "state": {
+          "summer": "Summer tires",
+          "winter": "Winter tires",
+          "all_season": "All-season tires"
+        }
+      }
+    }
+  }
+}

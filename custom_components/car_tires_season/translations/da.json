@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Tires Season",
+        "description": "Angiv, hvor bilen køres. Vejrkilder er valgfrie: Uden dem afgør den lovbestemte vinterperiode og kalenderen.",
+        "data": {
+          "name": "Navn",
+          "country": "Land",
+          "weather_entity": "Vejrenhed",
+          "temperature_entity": "Udendørs temperatursensor"
+        },
+        "data_description": {
+          "country": "Bestemmer, hvilke regler for vinterdæk der gælder.",
+          "weather_entity": "Leverer prognosen og den aktuelle temperatur.",
+          "temperature_entity": "Valgfri. Bruges i stedet for vejrenhedens temperatur."
+        }
+      },
+      "region": {
+        "title": "Region",
+        "description": "Reglerne varierer efter region. Lad feltet stå tomt for alle andre regioner.",
+        "data": {
+          "region": "Region"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Indstillinger",
+        "data": {
+          "region": "Region",
+          "weather_entity": "Vejrenhed",
+          "temperature_entity": "Udendørs temperatursensor",
+          "temperature_threshold": "Temperaturgrænse",
+          "forecast_days": "Dage der medregnes",
+          "notifications": "Vedvarende notifikation"
+        },
+        "data_description": {
+          "weather_entity": "Leverer prognosen og den aktuelle temperatur.",
+          "temperature_entity": "Valgfri. Bruges i stedet for vejrenhedens temperatur.",
+          "temperature_threshold": "Gennemsnitstemperatur, under hvilken vinterdæk anbefales (typisk 7 °C).",
+          "forecast_days": "Over hvor mange dages prognose (eller forløbne dage) der beregnes gennemsnit.",
+          "notifications": "Viser en notifikation, når det er tid til at skifte dæk."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recommendation": {
+        "name": "Anbefalede dæk",
+        "state": {
+          "summer": "Sommerdæk",
+          "winter": "Vinterdæk"
+        }
+      }
+    },
+    "binary_sensor": {
+      "change_due": {
+        "name": "Dækskift påkrævet"
+      }
+    },
+    "select": {
+      "mounted_tires": {
+        "name": "Monterede dæk",
+        "state": {
+          "summer": "Sommerdæk",
+          "winter": "Vinterdæk",
+          "all_season": "Helårsdæk"
+        }
+      }
+    }
+  }
+}

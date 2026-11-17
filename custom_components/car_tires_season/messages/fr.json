@@ -1,0 +1,14 @@
+{
+  "title": "Il est temps de changer de pneus",
+  "to_winter": "Les pneus hiver sont recommandés dès maintenant. Passez des pneus été aux pneus hiver.",
+  "to_summer": "Les pneus été sont recommandés dès maintenant. Passez des pneus hiver aux pneus été.",
+  "reasons": {
+    "legal_period": "Les pneus hiver sont obligatoires dans votre pays pendant cette période.",
+    "snow_expected": "Il neige ou de la neige est prévue.",
+    "frost_risk": "Du gel est prévu, les routes peuvent être verglacées.",
+    "cold_weather": "La température moyenne est inférieure au seuil.",
+    "mild_weather": "Le temps est doux depuis un moment.",
+    "season_calendar": "Aucune donnée météo disponible ; c'est la saison hivernale habituelle dans votre pays.",
+    "outside_season": "Nous sommes en dehors de la saison hivernale de votre pays."
+  }
+}
