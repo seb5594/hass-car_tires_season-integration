@@ -22,6 +22,18 @@ class IntegrationLayout(unittest.TestCase):
         hacs = json.loads((ROOT / "hacs.json").read_text())
         self.assertEqual(hacs["filename"], f"{COMPONENT.name}.zip")
 
+    def test_categories_are_one_to_three_distinct_entries(self):
+        manifest = json.loads((COMPONENT / "manifest.json").read_text())
+        categories = manifest["categories"]
+        self.assertTrue(1 <= len(categories) <= 3)
+        self.assertEqual(len(set(categories)), len(categories))
+        self.assertEqual(categories[0], "vehicles_transport.cars_evs")
+
+    def test_manifest_keys_are_sorted_like_hassfest_wants(self):
+        keys = list(json.loads((COMPONENT / "manifest.json").read_text()))
+        self.assertEqual(keys[:2], ["domain", "name"])
+        self.assertEqual(keys[2:], sorted(keys[2:]))
+
     def test_self_discovery_is_declared(self):
         manifest = json.loads((COMPONENT / "manifest.json").read_text())
         self.assertIn("_home-assistant._tcp.local.", manifest["zeroconf"])
