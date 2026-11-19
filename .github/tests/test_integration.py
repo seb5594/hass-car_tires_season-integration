@@ -16,7 +16,8 @@ class IntegrationLayout(unittest.TestCase):
 
     def test_version_follows_the_calendar_scheme(self):
         manifest = json.loads((COMPONENT / "manifest.json").read_text())
-        self.assertRegex(manifest["version"], r"^20\d\d\.(?:[1-9]|1[0-2])\.(?:[1-9]|[12]\d|3[01])\.\d+$")
+        # First build of a day: YYYY.MM.DD, every further one gets .1, .2 and so on.
+        self.assertRegex(manifest["version"], r"^20\d\d\.(?:[1-9]|1[0-2])\.(?:[1-9]|[12]\d|3[01])(?:\.[1-9]\d*)?$")
 
     def test_hacs_archive_matches_the_domain(self):
         hacs = json.loads((ROOT / "hacs.json").read_text())
