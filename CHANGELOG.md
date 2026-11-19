@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026.11.19.2
+
+- First release published with a plain version tag (no leading `v`).
+
 ## 2026.11.19.1
 
 - Versions now read `YYYY.MM.DD` for the first build of a day and `YYYY.MM.DD.1`, `.2` and so on for later ones. Release tags no longer start with a `v`.
