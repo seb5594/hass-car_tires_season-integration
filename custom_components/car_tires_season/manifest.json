@@ -2,6 +2,7 @@
   "domain": "car_tires_season",
   "name": "Car Tires Season",
   "after_dependencies": ["weather"],
+  "categories": ["vehicles_transport.cars_evs", "local_services"],
   "codeowners": ["@seb5594"],
   "config_flow": true,
   "documentation": "https://github.com/seb5594/hass-car_tires_season-integration",
