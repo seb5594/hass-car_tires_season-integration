@@ -10,6 +10,6 @@
   "iot_class": "calculated",
   "issue_tracker": "https://github.com/seb5594/hass-car_tires_season-integration/issues",
   "requirements": [],
-  "version": "2026.11.17.0",
+  "version": "2026.11.19.0",
   "zeroconf": ["_home-assistant._tcp.local."]
 }

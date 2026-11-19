@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026.11.19.0
+
+- The integration name and the suggested name in the setup follow the language of the Home Assistant server (for example "Autoreifen Saison").
+- The country is preselected from the Home Assistant settings or the time zone.
+- README describes the special cases of the supported countries.
+- Manifest categories added for the Home Assistant and HACS catalogs.
+
 ## 2026.11.17.0
 
 - First release: winter tire rules of 47 countries with sources, recommendation sensor, "tire change due" binary sensor, mounted tires select and an optional persistent notification.
